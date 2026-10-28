@@ -1,0 +1,4550 @@
+{
+  "schema": 10,
+  "id": "121c42eb",
+  "file": "snaptik.vn_7697465212353400080.mp4",
+  "reporter": "Người dân (citizen_uploads)",
+  "lat": 10.69744,
+  "lon": 106.70348,
+  "dist_km": 0.0,
+  "created": "2026-10-27T15:42:33.899111+00:00",
+  "video_url": "/processed/121c42eb_processed.mp4",
+  "source_video_url": "/media/snaptik.vn_7697465212353400080.mp4",
+  "processed_video_url": "/processed/121c42eb_processed.mp4",
+  "processed_video_path": "processed_videos/121c42eb_processed.mp4",
+  "processed_video_audio_preserved": true,
+  "frames": [
+    {
+      "t": 0.0,
+      "frame_index": 0,
+      "bbox": [
+        0.0458,
+        0.2042,
+        0.9997,
+        0.6669
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0458,
+            0.2042,
+            0.9997,
+            0.6669
+          ],
+          "conf": 0.9
+        }
+      ],
+      "fire": [],
+      "conf": 0.9,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.944,
+      "scene": 0,
+      "coverage": 0.2334,
+      "cov_dense": 0.2006,
+      "opacity": 0.799,
+      "oi": 0.1866,
+      "coverage_avg": 0.2334,
+      "opacity_avg": 0.799,
+      "oi_avg": 0.1866,
+      "level": "Đặc",
+      "flow_ok": false,
+      "flow_reason": "dau_clip",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "dir_state": "none",
+      "dir_note": "Chưa đủ cặp khung liên tục có khói để kết luận hướng.",
+      "anchor": [
+        0.6026,
+        0.4934
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 0.2,
+      "frame_index": 6,
+      "bbox": [
+        0.0485,
+        0.2006,
+        0.9983,
+        0.6668
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0485,
+            0.2006,
+            0.9983,
+            0.6668
+          ],
+          "conf": 0.898
+        }
+      ],
+      "fire": [],
+      "conf": 0.898,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.932,
+      "scene": 0,
+      "coverage": 0.2325,
+      "cov_dense": 0.1992,
+      "opacity": 0.799,
+      "oi": 0.1853,
+      "coverage_avg": 0.2325,
+      "opacity_avg": 0.799,
+      "oi_avg": 0.1853,
+      "level": "Đặc",
+      "flow_ok": false,
+      "flow_reason": "dau_clip",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "dir_state": "none",
+      "dir_note": "Chưa đủ cặp khung liên tục có khói để kết luận hướng.",
+      "anchor": [
+        0.6032,
+        0.4957
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 0.4,
+      "frame_index": 12,
+      "bbox": [
+        0.0524,
+        0.2064,
+        0.9969,
+        0.6681
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0524,
+            0.2064,
+            0.9969,
+            0.6681
+          ],
+          "conf": 0.898
+        }
+      ],
+      "fire": [],
+      "conf": 0.898,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.935,
+      "scene": 0,
+      "coverage": 0.2316,
+      "cov_dense": 0.1988,
+      "opacity": 0.8,
+      "oi": 0.1852,
+      "coverage_avg": 0.2316,
+      "opacity_avg": 0.8,
+      "oi_avg": 0.1852,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 21.1,
+      "R_raw": 0.955,
+      "R": 0.955,
+      "angle": 21.1,
+      "dir": "Phải",
+      "tilt": 68.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 21.1,
+      "tilt_avg": 68.9,
+      "R_avg": 0.955,
+      "anchor": [
+        0.6042,
+        0.4969
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 0.6,
+      "frame_index": 18,
+      "bbox": [
+        0.0491,
+        0.2073,
+        0.9941,
+        0.6683
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0491,
+            0.2073,
+            0.9941,
+            0.6683
+          ],
+          "conf": 0.899
+        }
+      ],
+      "fire": [],
+      "conf": 0.899,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.905,
+      "scene": 0,
+      "coverage": 0.228,
+      "cov_dense": 0.1974,
+      "opacity": 0.8,
+      "oi": 0.183,
+      "coverage_avg": 0.228,
+      "opacity_avg": 0.8,
+      "oi_avg": 0.183,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 20.6,
+      "R_raw": 0.951,
+      "R": 0.953,
+      "angle": 20.8,
+      "dir": "Phải",
+      "tilt": 69.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 20.8,
+      "tilt_avg": 69.2,
+      "R_avg": 0.953,
+      "anchor": [
+        0.6018,
+        0.4987
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 0.8,
+      "frame_index": 24,
+      "bbox": [
+        0.0446,
+        0.2101,
+        0.9944,
+        0.6691
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0446,
+            0.2101,
+            0.9944,
+            0.6691
+          ],
+          "conf": 0.893
+        }
+      ],
+      "fire": [],
+      "conf": 0.893,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.896,
+      "scene": 0,
+      "coverage": 0.228,
+      "cov_dense": 0.1974,
+      "opacity": 0.801,
+      "oi": 0.1826,
+      "coverage_avg": 0.228,
+      "opacity_avg": 0.801,
+      "oi_avg": 0.1826,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 23.3,
+      "R_raw": 0.91,
+      "R": 0.938,
+      "angle": 21.6,
+      "dir": "Phải",
+      "tilt": 68.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 21.6,
+      "tilt_avg": 68.4,
+      "R_avg": 0.938,
+      "anchor": [
+        0.6059,
+        0.5001
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 1.0,
+      "frame_index": 30,
+      "bbox": [
+        0.0433,
+        0.2096,
+        0.9961,
+        0.671
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0433,
+            0.2096,
+            0.9961,
+            0.671
+          ],
+          "conf": 0.888
+        }
+      ],
+      "fire": [],
+      "conf": 0.888,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.882,
+      "scene": 0,
+      "coverage": 0.2279,
+      "cov_dense": 0.1963,
+      "opacity": 0.801,
+      "oi": 0.1819,
+      "coverage_avg": 0.2279,
+      "opacity_avg": 0.801,
+      "oi_avg": 0.1819,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 25.7,
+      "R_raw": 0.926,
+      "R": 0.935,
+      "angle": 22.6,
+      "dir": "Phải-Lên",
+      "tilt": 67.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 22.6,
+      "tilt_avg": 67.4,
+      "R_avg": 0.935,
+      "anchor": [
+        0.6087,
+        0.5014
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 1.2,
+      "frame_index": 36,
+      "bbox": [
+        0.0547,
+        0.2091,
+        0.9941,
+        0.6765
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0547,
+            0.2091,
+            0.9941,
+            0.6765
+          ],
+          "conf": 0.885
+        }
+      ],
+      "fire": [],
+      "conf": 0.885,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.901,
+      "scene": 0,
+      "coverage": 0.2273,
+      "cov_dense": 0.1962,
+      "opacity": 0.801,
+      "oi": 0.1816,
+      "coverage_avg": 0.2273,
+      "opacity_avg": 0.801,
+      "oi_avg": 0.1816,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 26.3,
+      "R_raw": 0.851,
+      "R": 0.918,
+      "angle": 23.3,
+      "dir": "Phải-Lên",
+      "tilt": 66.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 23.3,
+      "tilt_avg": 66.7,
+      "R_avg": 0.918,
+      "anchor": [
+        0.6078,
+        0.5038
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 1.4,
+      "frame_index": 42,
+      "bbox": [
+        0.0676,
+        0.2097,
+        0.9957,
+        0.6763
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0676,
+            0.2097,
+            0.9957,
+            0.6763
+          ],
+          "conf": 0.888
+        }
+      ],
+      "fire": [],
+      "conf": 0.888,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.887,
+      "scene": 0,
+      "coverage": 0.2273,
+      "cov_dense": 0.1962,
+      "opacity": 0.801,
+      "oi": 0.1816,
+      "coverage_avg": 0.2273,
+      "opacity_avg": 0.801,
+      "oi_avg": 0.1816,
+      "level": "Đặc",
+      "flow_ok": false,
+      "flow_reason": "R_thap",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "R": 0.909,
+      "angle": 23.9,
+      "dir": "Phải-Lên",
+      "tilt": 66.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 23.9,
+      "tilt_avg": 66.1,
+      "R_avg": 0.909,
+      "anchor": [
+        0.6134,
+        0.505
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 1.6,
+      "frame_index": 48,
+      "bbox": [
+        0.0857,
+        0.2092,
+        0.9927,
+        0.6751
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0857,
+            0.2092,
+            0.9927,
+            0.6751
+          ],
+          "conf": 0.889
+        }
+      ],
+      "fire": [],
+      "conf": 0.889,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.882,
+      "scene": 0,
+      "coverage": 0.225,
+      "cov_dense": 0.1951,
+      "opacity": 0.802,
+      "oi": 0.1805,
+      "coverage_avg": 0.225,
+      "opacity_avg": 0.802,
+      "oi_avg": 0.1805,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 32.5,
+      "R_raw": 0.59,
+      "R": 0.818,
+      "angle": 26.4,
+      "dir": "Phải-Lên",
+      "tilt": 63.6,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 26.4,
+      "tilt_avg": 63.6,
+      "R_avg": 0.818,
+      "anchor": [
+        0.6215,
+        0.5038
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 1.8,
+      "frame_index": 54,
+      "bbox": [
+        0.0866,
+        0.2047,
+        0.995,
+        0.6797
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0866,
+            0.2047,
+            0.995,
+            0.6797
+          ],
+          "conf": 0.886
+        }
+      ],
+      "fire": [],
+      "conf": 0.886,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.913,
+      "scene": 0,
+      "coverage": 0.2226,
+      "cov_dense": 0.194,
+      "opacity": 0.804,
+      "oi": 0.1794,
+      "coverage_avg": 0.2226,
+      "opacity_avg": 0.804,
+      "oi_avg": 0.1794,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 47.8,
+      "R_raw": 0.631,
+      "R": 0.741,
+      "angle": 31.8,
+      "dir": "Phải-Lên",
+      "tilt": 58.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 31.8,
+      "tilt_avg": 58.2,
+      "R_avg": 0.741,
+      "anchor": [
+        0.6271,
+        0.5068
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 2.0,
+      "frame_index": 60,
+      "bbox": [
+        0.0953,
+        0.203,
+        0.9942,
+        0.6778
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0953,
+            0.203,
+            0.9942,
+            0.6778
+          ],
+          "conf": 0.885
+        }
+      ],
+      "fire": [],
+      "conf": 0.885,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.926,
+      "scene": 0,
+      "coverage": 0.2223,
+      "cov_dense": 0.1932,
+      "opacity": 0.807,
+      "oi": 0.179,
+      "coverage_avg": 0.2223,
+      "opacity_avg": 0.807,
+      "oi_avg": 0.179,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 40.1,
+      "R_raw": 0.632,
+      "R": 0.669,
+      "angle": 35.9,
+      "dir": "Phải-Lên",
+      "tilt": 54.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 35.9,
+      "tilt_avg": 54.1,
+      "R_avg": 0.669,
+      "anchor": [
+        0.6331,
+        0.5062
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 2.2,
+      "frame_index": 66,
+      "bbox": [
+        0.1074,
+        0.2051,
+        0.9923,
+        0.6785
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1074,
+            0.2051,
+            0.9923,
+            0.6785
+          ],
+          "conf": 0.886
+        }
+      ],
+      "fire": [],
+      "conf": 0.886,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.9,
+      "scene": 0,
+      "coverage": 0.2207,
+      "cov_dense": 0.1927,
+      "opacity": 0.807,
+      "oi": 0.1793,
+      "coverage_avg": 0.2207,
+      "opacity_avg": 0.807,
+      "oi_avg": 0.1793,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 26.6,
+      "R_raw": 0.694,
+      "R": 0.63,
+      "angle": 36.6,
+      "dir": "Phải-Lên",
+      "tilt": 53.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 36.6,
+      "tilt_avg": 53.4,
+      "R_avg": 0.63,
+      "anchor": [
+        0.6389,
+        0.5072
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 2.4,
+      "frame_index": 72,
+      "bbox": [
+        0.1218,
+        0.1983,
+        0.9937,
+        0.6796
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1218,
+            0.1983,
+            0.9937,
+            0.6796
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.927,
+      "scene": 0,
+      "coverage": 0.2207,
+      "cov_dense": 0.1927,
+      "opacity": 0.809,
+      "oi": 0.1793,
+      "coverage_avg": 0.2207,
+      "opacity_avg": 0.809,
+      "oi_avg": 0.1793,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 35.6,
+      "R_raw": 0.689,
+      "R": 0.642,
+      "angle": 36.3,
+      "dir": "Phải-Lên",
+      "tilt": 53.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 36.3,
+      "tilt_avg": 53.7,
+      "R_avg": 0.642,
+      "anchor": [
+        0.6448,
+        0.5073
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 2.6,
+      "frame_index": 78,
+      "bbox": [
+        0.1235,
+        0.1981,
+        0.9971,
+        0.6815
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1235,
+            0.1981,
+            0.9971,
+            0.6815
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.928,
+      "scene": 0,
+      "coverage": 0.2207,
+      "cov_dense": 0.1927,
+      "opacity": 0.813,
+      "oi": 0.1793,
+      "coverage_avg": 0.2207,
+      "opacity_avg": 0.813,
+      "oi_avg": 0.1793,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 36.7,
+      "R_raw": 0.747,
+      "R": 0.674,
+      "angle": 37.1,
+      "dir": "Phải-Lên",
+      "tilt": 52.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 37.1,
+      "tilt_avg": 52.9,
+      "R_avg": 0.674,
+      "anchor": [
+        0.6489,
+        0.5081
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 2.8,
+      "frame_index": 84,
+      "bbox": [
+        0.1288,
+        0.1972,
+        1.0,
+        0.6793
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1288,
+            0.1972,
+            1.0,
+            0.6793
+          ],
+          "conf": 0.88
+        }
+      ],
+      "fire": [],
+      "conf": 0.88,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.926,
+      "scene": 0,
+      "coverage": 0.221,
+      "cov_dense": 0.1932,
+      "opacity": 0.813,
+      "oi": 0.1798,
+      "coverage_avg": 0.221,
+      "opacity_avg": 0.813,
+      "oi_avg": 0.1798,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 26.2,
+      "R_raw": 0.927,
+      "R": 0.734,
+      "angle": 32.5,
+      "dir": "Phải-Lên",
+      "tilt": 57.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 32.5,
+      "tilt_avg": 57.5,
+      "R_avg": 0.734,
+      "anchor": [
+        0.6577,
+        0.5066
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 3.0,
+      "frame_index": 90,
+      "bbox": [
+        0.1256,
+        0.1859,
+        1.0,
+        0.6824
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1256,
+            0.1859,
+            1.0,
+            0.6824
+          ],
+          "conf": 0.874
+        }
+      ],
+      "fire": [],
+      "conf": 0.874,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.934,
+      "scene": 0,
+      "coverage": 0.221,
+      "cov_dense": 0.1932,
+      "opacity": 0.813,
+      "oi": 0.1798,
+      "coverage_avg": 0.221,
+      "opacity_avg": 0.813,
+      "oi_avg": 0.1798,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 26.7,
+      "R_raw": 0.815,
+      "R": 0.772,
+      "angle": 30.1,
+      "dir": "Phải-Lên",
+      "tilt": 59.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 30.1,
+      "tilt_avg": 59.9,
+      "R_avg": 0.772,
+      "anchor": [
+        0.6554,
+        0.5104
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 3.2,
+      "frame_index": 96,
+      "bbox": [
+        0.1238,
+        0.1839,
+        1.0,
+        0.6825
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1238,
+            0.1839,
+            1.0,
+            0.6825
+          ],
+          "conf": 0.874
+        }
+      ],
+      "fire": [],
+      "conf": 0.874,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.938,
+      "scene": 0,
+      "coverage": 0.2213,
+      "cov_dense": 0.1934,
+      "opacity": 0.813,
+      "oi": 0.1801,
+      "coverage_avg": 0.2213,
+      "opacity_avg": 0.813,
+      "oi_avg": 0.1801,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 27.2,
+      "R_raw": 0.717,
+      "R": 0.777,
+      "angle": 30.2,
+      "dir": "Phải-Lên",
+      "tilt": 59.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 30.2,
+      "tilt_avg": 59.8,
+      "R_avg": 0.777,
+      "anchor": [
+        0.6569,
+        0.5106
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 3.4,
+      "frame_index": 102,
+      "bbox": [
+        0.1302,
+        0.1829,
+        1.0,
+        0.6809
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1302,
+            0.1829,
+            1.0,
+            0.6809
+          ],
+          "conf": 0.872
+        }
+      ],
+      "fire": [],
+      "conf": 0.872,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.924,
+      "scene": 0,
+      "coverage": 0.223,
+      "cov_dense": 0.1935,
+      "opacity": 0.811,
+      "oi": 0.1807,
+      "coverage_avg": 0.223,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1807,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 28.5,
+      "R_raw": 0.687,
+      "R": 0.777,
+      "angle": 28.9,
+      "dir": "Phải-Lên",
+      "tilt": 61.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 28.9,
+      "tilt_avg": 61.1,
+      "R_avg": 0.777,
+      "anchor": [
+        0.6588,
+        0.5098
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 3.6,
+      "frame_index": 108,
+      "bbox": [
+        0.1223,
+        0.181,
+        1.0,
+        0.6815
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1223,
+            0.181,
+            1.0,
+            0.6815
+          ],
+          "conf": 0.87
+        }
+      ],
+      "fire": [],
+      "conf": 0.87,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.893,
+      "scene": 0,
+      "coverage": 0.2235,
+      "cov_dense": 0.1939,
+      "opacity": 0.809,
+      "oi": 0.1808,
+      "coverage_avg": 0.2235,
+      "opacity_avg": 0.809,
+      "oi_avg": 0.1808,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 16.4,
+      "R_raw": 0.882,
+      "R": 0.803,
+      "angle": 24.7,
+      "dir": "Phải-Lên",
+      "tilt": 65.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 24.7,
+      "tilt_avg": 65.3,
+      "R_avg": 0.803,
+      "anchor": [
+        0.6577,
+        0.5096
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 3.8,
+      "frame_index": 114,
+      "bbox": [
+        0.1263,
+        0.1783,
+        1.0,
+        0.6855
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1263,
+            0.1783,
+            1.0,
+            0.6855
+          ],
+          "conf": 0.873
+        }
+      ],
+      "fire": [],
+      "conf": 0.873,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.893,
+      "scene": 0,
+      "coverage": 0.2236,
+      "cov_dense": 0.1935,
+      "opacity": 0.808,
+      "oi": 0.1807,
+      "coverage_avg": 0.2236,
+      "opacity_avg": 0.808,
+      "oi_avg": 0.1807,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 12.3,
+      "R_raw": 0.932,
+      "R": 0.801,
+      "angle": 21.5,
+      "dir": "Phải",
+      "tilt": 68.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 21.5,
+      "tilt_avg": 68.5,
+      "R_avg": 0.801,
+      "anchor": [
+        0.6534,
+        0.5123
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 4.0,
+      "frame_index": 120,
+      "bbox": [
+        0.1258,
+        0.1798,
+        1.0,
+        0.6848
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1258,
+            0.1798,
+            1.0,
+            0.6848
+          ],
+          "conf": 0.876
+        }
+      ],
+      "fire": [],
+      "conf": 0.876,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.887,
+      "scene": 0,
+      "coverage": 0.2236,
+      "cov_dense": 0.1935,
+      "opacity": 0.808,
+      "oi": 0.1807,
+      "coverage_avg": 0.2236,
+      "opacity_avg": 0.808,
+      "oi_avg": 0.1807,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 12.3,
+      "R_raw": 0.828,
+      "R": 0.803,
+      "angle": 18.6,
+      "dir": "Phải",
+      "tilt": 71.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 18.6,
+      "tilt_avg": 71.4,
+      "R_avg": 0.803,
+      "anchor": [
+        0.6622,
+        0.4993
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 4.2,
+      "frame_index": 126,
+      "bbox": [
+        0.1215,
+        0.1854,
+        0.9961,
+        0.6783
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1215,
+            0.1854,
+            0.9961,
+            0.6783
+          ],
+          "conf": 0.877
+        }
+      ],
+      "fire": [],
+      "conf": 0.877,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.912,
+      "scene": 0,
+      "coverage": 0.2236,
+      "cov_dense": 0.1934,
+      "opacity": 0.807,
+      "oi": 0.1807,
+      "coverage_avg": 0.2236,
+      "opacity_avg": 0.807,
+      "oi_avg": 0.1807,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 6.3,
+      "R_raw": 0.824,
+      "R": 0.824,
+      "angle": 14.6,
+      "dir": "Phải",
+      "tilt": 75.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 14.6,
+      "tilt_avg": 75.4,
+      "R_avg": 0.824,
+      "anchor": [
+        0.6523,
+        0.5071
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 4.4,
+      "frame_index": 132,
+      "bbox": [
+        0.1314,
+        0.1833,
+        0.993,
+        0.675
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1314,
+            0.1833,
+            0.993,
+            0.675
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.923,
+      "scene": 0,
+      "coverage": 0.2232,
+      "cov_dense": 0.1931,
+      "opacity": 0.805,
+      "oi": 0.1796,
+      "coverage_avg": 0.2232,
+      "opacity_avg": 0.805,
+      "oi_avg": 0.1796,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 3.8,
+      "R_raw": 0.917,
+      "R": 0.874,
+      "angle": 10.2,
+      "dir": "Phải",
+      "tilt": 79.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 10.2,
+      "tilt_avg": 79.8,
+      "R_avg": 0.874,
+      "anchor": [
+        0.6471,
+        0.5039
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 4.6,
+      "frame_index": 138,
+      "bbox": [
+        0.1351,
+        0.1843,
+        0.9936,
+        0.672
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1351,
+            0.1843,
+            0.9936,
+            0.672
+          ],
+          "conf": 0.881
+        }
+      ],
+      "fire": [],
+      "conf": 0.881,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.936,
+      "scene": 0,
+      "coverage": 0.2232,
+      "cov_dense": 0.193,
+      "opacity": 0.805,
+      "oi": 0.1792,
+      "coverage_avg": 0.2232,
+      "opacity_avg": 0.805,
+      "oi_avg": 0.1792,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 4.0,
+      "R_raw": 0.785,
+      "R": 0.855,
+      "angle": 7.8,
+      "dir": "Phải",
+      "tilt": 82.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 7.8,
+      "tilt_avg": 82.2,
+      "R_avg": 0.855,
+      "anchor": [
+        0.6513,
+        0.4992
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 4.8,
+      "frame_index": 144,
+      "bbox": [
+        0.1232,
+        0.1829,
+        0.9924,
+        0.6657
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1232,
+            0.1829,
+            0.9924,
+            0.6657
+          ],
+          "conf": 0.887
+        }
+      ],
+      "fire": [],
+      "conf": 0.887,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.908,
+      "scene": 0,
+      "coverage": 0.2232,
+      "cov_dense": 0.1917,
+      "opacity": 0.802,
+      "oi": 0.1787,
+      "coverage_avg": 0.2232,
+      "opacity_avg": 0.802,
+      "oi_avg": 0.1787,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 359.7,
+      "R_raw": 0.784,
+      "R": 0.826,
+      "angle": 5.3,
+      "dir": "Phải",
+      "tilt": 84.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 5.3,
+      "tilt_avg": 84.7,
+      "R_avg": 0.826,
+      "anchor": [
+        0.6504,
+        0.4947
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 5.0,
+      "frame_index": 150,
+      "bbox": [
+        0.1148,
+        0.1751,
+        0.9931,
+        0.6621
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1148,
+            0.1751,
+            0.9931,
+            0.6621
+          ],
+          "conf": 0.889
+        }
+      ],
+      "fire": [],
+      "conf": 0.889,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.904,
+      "scene": 0,
+      "coverage": 0.2236,
+      "cov_dense": 0.1917,
+      "opacity": 0.796,
+      "oi": 0.1786,
+      "coverage_avg": 0.2236,
+      "opacity_avg": 0.796,
+      "oi_avg": 0.1786,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 355.3,
+      "R_raw": 0.831,
+      "R": 0.826,
+      "angle": 1.9,
+      "dir": "Phải",
+      "tilt": 88.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 1.9,
+      "tilt_avg": 88.1,
+      "R_avg": 0.826,
+      "anchor": [
+        0.6468,
+        0.4926
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 5.2,
+      "frame_index": 156,
+      "bbox": [
+        0.1211,
+        0.1745,
+        0.9925,
+        0.6582
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1211,
+            0.1745,
+            0.9925,
+            0.6582
+          ],
+          "conf": 0.889
+        }
+      ],
+      "fire": [],
+      "conf": 0.889,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.906,
+      "scene": 0,
+      "coverage": 0.2253,
+      "cov_dense": 0.1917,
+      "opacity": 0.794,
+      "oi": 0.1786,
+      "coverage_avg": 0.2253,
+      "opacity_avg": 0.794,
+      "oi_avg": 0.1786,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 357.8,
+      "R_raw": 0.878,
+      "R": 0.838,
+      "angle": 0.1,
+      "dir": "Phải",
+      "tilt": 89.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 0.1,
+      "tilt_avg": 89.9,
+      "R_avg": 0.838,
+      "anchor": [
+        0.6452,
+        0.4877
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 5.4,
+      "frame_index": 162,
+      "bbox": [
+        0.1166,
+        0.1697,
+        0.9932,
+        0.655
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1166,
+            0.1697,
+            0.9932,
+            0.655
+          ],
+          "conf": 0.891
+        }
+      ],
+      "fire": [],
+      "conf": 0.891,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.919,
+      "scene": 0,
+      "coverage": 0.2257,
+      "cov_dense": 0.1917,
+      "opacity": 0.787,
+      "oi": 0.178,
+      "coverage_avg": 0.2257,
+      "opacity_avg": 0.787,
+      "oi_avg": 0.178,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 355.3,
+      "R_raw": 0.875,
+      "R": 0.829,
+      "angle": 358.3,
+      "dir": "Phải",
+      "tilt": 91.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 358.3,
+      "tilt_avg": 91.7,
+      "R_avg": 0.829,
+      "anchor": [
+        0.6427,
+        0.486
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 5.6,
+      "frame_index": 168,
+      "bbox": [
+        0.1031,
+        0.1644,
+        0.9933,
+        0.6552
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1031,
+            0.1644,
+            0.9933,
+            0.6552
+          ],
+          "conf": 0.891
+        }
+      ],
+      "fire": [],
+      "conf": 0.891,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.913,
+      "scene": 0,
+      "coverage": 0.2283,
+      "cov_dense": 0.1917,
+      "opacity": 0.782,
+      "oi": 0.178,
+      "coverage_avg": 0.2283,
+      "opacity_avg": 0.782,
+      "oi_avg": 0.178,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 357.7,
+      "R_raw": 0.84,
+      "R": 0.841,
+      "angle": 357.1,
+      "dir": "Phải",
+      "tilt": 92.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 357.1,
+      "tilt_avg": 92.9,
+      "R_avg": 0.841,
+      "anchor": [
+        0.6381,
+        0.4848
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 5.8,
+      "frame_index": 174,
+      "bbox": [
+        0.0894,
+        0.1605,
+        0.9946,
+        0.6537
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0894,
+            0.1605,
+            0.9946,
+            0.6537
+          ],
+          "conf": 0.887
+        }
+      ],
+      "fire": [],
+      "conf": 0.887,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.91,
+      "scene": 0,
+      "coverage": 0.2288,
+      "cov_dense": 0.192,
+      "opacity": 0.78,
+      "oi": 0.1783,
+      "coverage_avg": 0.2288,
+      "opacity_avg": 0.78,
+      "oi_avg": 0.1783,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 2.7,
+      "R_raw": 0.838,
+      "R": 0.852,
+      "angle": 357.7,
+      "dir": "Phải",
+      "tilt": 92.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 357.7,
+      "tilt_avg": 92.3,
+      "R_avg": 0.852,
+      "anchor": [
+        0.6321,
+        0.4831
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 6.0,
+      "frame_index": 180,
+      "bbox": [
+        0.0916,
+        0.1571,
+        0.9943,
+        0.6513
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0916,
+            0.1571,
+            0.9943,
+            0.6513
+          ],
+          "conf": 0.891
+        }
+      ],
+      "fire": [],
+      "conf": 0.891,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.914,
+      "scene": 0,
+      "coverage": 0.2297,
+      "cov_dense": 0.192,
+      "opacity": 0.777,
+      "oi": 0.1783,
+      "coverage_avg": 0.2297,
+      "opacity_avg": 0.777,
+      "oi_avg": 0.1783,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 2.6,
+      "R_raw": 0.944,
+      "R": 0.874,
+      "angle": 359.2,
+      "dir": "Phải",
+      "tilt": 90.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 359.2,
+      "tilt_avg": 90.8,
+      "R_avg": 0.874,
+      "anchor": [
+        0.6304,
+        0.4806
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 6.2,
+      "frame_index": 186,
+      "bbox": [
+        0.0962,
+        0.1572,
+        0.9958,
+        0.6507
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0962,
+            0.1572,
+            0.9958,
+            0.6507
+          ],
+          "conf": 0.89
+        }
+      ],
+      "fire": [],
+      "conf": 0.89,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.924,
+      "scene": 0,
+      "coverage": 0.2301,
+      "cov_dense": 0.192,
+      "opacity": 0.775,
+      "oi": 0.1782,
+      "coverage_avg": 0.2301,
+      "opacity_avg": 0.775,
+      "oi_avg": 0.1782,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 2.8,
+      "R_raw": 0.949,
+      "R": 0.888,
+      "angle": 0.3,
+      "dir": "Phải",
+      "tilt": 89.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 0.3,
+      "tilt_avg": 89.7,
+      "R_avg": 0.888,
+      "anchor": [
+        0.6288,
+        0.4786
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 6.4,
+      "frame_index": 192,
+      "bbox": [
+        0.1027,
+        0.1578,
+        0.9952,
+        0.6492
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.1027,
+            0.1578,
+            0.9952,
+            0.6492
+          ],
+          "conf": 0.891
+        }
+      ],
+      "fire": [],
+      "conf": 0.891,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.945,
+      "scene": 0,
+      "coverage": 0.2302,
+      "cov_dense": 0.1923,
+      "opacity": 0.774,
+      "oi": 0.1783,
+      "coverage_avg": 0.2302,
+      "opacity_avg": 0.774,
+      "oi_avg": 0.1783,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 6.5,
+      "R_raw": 0.954,
+      "R": 0.904,
+      "angle": 2.6,
+      "dir": "Phải",
+      "tilt": 87.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 2.6,
+      "tilt_avg": 87.4,
+      "R_avg": 0.904,
+      "anchor": [
+        0.625,
+        0.4787
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 6.6,
+      "frame_index": 198,
+      "bbox": [
+        0.0904,
+        0.1545,
+        0.9957,
+        0.6493
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0904,
+            0.1545,
+            0.9957,
+            0.6493
+          ],
+          "conf": 0.889
+        }
+      ],
+      "fire": [],
+      "conf": 0.889,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.942,
+      "scene": 0,
+      "coverage": 0.2302,
+      "cov_dense": 0.192,
+      "opacity": 0.774,
+      "oi": 0.1782,
+      "coverage_avg": 0.2302,
+      "opacity_avg": 0.774,
+      "oi_avg": 0.1782,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 5.4,
+      "R_raw": 0.892,
+      "R": 0.915,
+      "angle": 4.0,
+      "dir": "Phải",
+      "tilt": 86.0,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 4.0,
+      "tilt_avg": 86.0,
+      "R_avg": 0.915,
+      "anchor": [
+        0.6219,
+        0.4783
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 6.8,
+      "frame_index": 204,
+      "bbox": [
+        0.0825,
+        0.1533,
+        0.9982,
+        0.6504
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.0825,
+            0.1533,
+            0.9982,
+            0.6504
+          ],
+          "conf": 0.888
+        }
+      ],
+      "fire": [],
+      "conf": 0.888,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.923,
+      "scene": 0,
+      "coverage": 0.2297,
+      "cov_dense": 0.1918,
+      "opacity": 0.774,
+      "oi": 0.1779,
+      "coverage_avg": 0.2297,
+      "opacity_avg": 0.774,
+      "oi_avg": 0.1779,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 1.5,
+      "R_raw": 0.906,
+      "R": 0.928,
+      "angle": 3.8,
+      "dir": "Phải",
+      "tilt": 86.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 3.8,
+      "tilt_avg": 86.2,
+      "R_avg": 0.928,
+      "anchor": [
+        0.6191,
+        0.4773
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 7.0,
+      "frame_index": 210,
+      "bbox": [
+        0.2959,
+        0.3442,
+        0.9905,
+        0.7144
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2959,
+            0.3442,
+            0.9905,
+            0.7144
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.953,
+      "scene": 0,
+      "coverage": 0.1601,
+      "cov_dense": 0.1455,
+      "opacity": 0.842,
+      "oi": 0.1349,
+      "coverage_avg": 0.1601,
+      "opacity_avg": 0.842,
+      "oi_avg": 0.1349,
+      "level": "Đặc",
+      "flow_ok": false,
+      "flow_reason": "R_thap",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "R": 0.925,
+      "angle": 4.1,
+      "dir": "Phải",
+      "tilt": 85.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 4.1,
+      "tilt_avg": 85.9,
+      "R_avg": 0.925,
+      "anchor": [
+        0.7037,
+        0.5793
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 7.2,
+      "frame_index": 216,
+      "bbox": [
+        0.2912,
+        0.3454,
+        0.9904,
+        0.7104
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2912,
+            0.3454,
+            0.9904,
+            0.7104
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.965,
+      "scene": 0,
+      "coverage": 0.1601,
+      "cov_dense": 0.1455,
+      "opacity": 0.842,
+      "oi": 0.1349,
+      "coverage_avg": 0.1601,
+      "opacity_avg": 0.842,
+      "oi_avg": 0.1349,
+      "level": "Đặc",
+      "flow_ok": false,
+      "flow_reason": "R_thap",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "R": 0.917,
+      "angle": 4.5,
+      "dir": "Phải",
+      "tilt": 85.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 4.5,
+      "tilt_avg": 85.5,
+      "R_avg": 0.917,
+      "anchor": [
+        0.7036,
+        0.5776
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 7.4,
+      "frame_index": 222,
+      "bbox": [
+        0.279,
+        0.3417,
+        0.9938,
+        0.7176
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.279,
+            0.3417,
+            0.9938,
+            0.7176
+          ],
+          "conf": 0.869
+        }
+      ],
+      "fire": [],
+      "conf": 0.869,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.954,
+      "scene": 0,
+      "coverage": 0.1601,
+      "cov_dense": 0.1455,
+      "opacity": 0.843,
+      "oi": 0.1349,
+      "coverage_avg": 0.1601,
+      "opacity_avg": 0.843,
+      "oi_avg": 0.1349,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 29.0,
+      "R_raw": 0.689,
+      "R": 0.812,
+      "angle": 10.4,
+      "dir": "Phải",
+      "tilt": 79.6,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 10.4,
+      "tilt_avg": 79.6,
+      "R_avg": 0.812,
+      "anchor": [
+        0.6983,
+        0.5813
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 7.6,
+      "frame_index": 228,
+      "bbox": [
+        0.2787,
+        0.3406,
+        0.9933,
+        0.7193
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2787,
+            0.3406,
+            0.9933,
+            0.7193
+          ],
+          "conf": 0.872
+        }
+      ],
+      "fire": [],
+      "conf": 0.872,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.963,
+      "scene": 0,
+      "coverage": 0.1613,
+      "cov_dense": 0.1461,
+      "opacity": 0.843,
+      "oi": 0.1356,
+      "coverage_avg": 0.1613,
+      "opacity_avg": 0.843,
+      "oi_avg": 0.1356,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 41.4,
+      "R_raw": 0.858,
+      "R": 0.781,
+      "angle": 23.3,
+      "dir": "Phải-Lên",
+      "tilt": 66.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 23.3,
+      "tilt_avg": 66.7,
+      "R_avg": 0.781,
+      "anchor": [
+        0.6996,
+        0.5813
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 7.8,
+      "frame_index": 234,
+      "bbox": [
+        0.2799,
+        0.3353,
+        0.9938,
+        0.7217
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2799,
+            0.3353,
+            0.9938,
+            0.7217
+          ],
+          "conf": 0.871
+        }
+      ],
+      "fire": [],
+      "conf": 0.871,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.967,
+      "scene": 0,
+      "coverage": 0.1625,
+      "cov_dense": 0.1473,
+      "opacity": 0.842,
+      "oi": 0.1367,
+      "coverage_avg": 0.1625,
+      "opacity_avg": 0.842,
+      "oi_avg": 0.1367,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 19.8,
+      "R_raw": 0.973,
+      "R": 0.829,
+      "angle": 29.7,
+      "dir": "Phải-Lên",
+      "tilt": 60.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 29.7,
+      "tilt_avg": 60.3,
+      "R_avg": 0.829,
+      "anchor": [
+        0.6997,
+        0.5824
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 8.0,
+      "frame_index": 240,
+      "bbox": [
+        0.2725,
+        0.3352,
+        0.9952,
+        0.7208
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2725,
+            0.3352,
+            0.9952,
+            0.7208
+          ],
+          "conf": 0.866
+        }
+      ],
+      "fire": [],
+      "conf": 0.866,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.966,
+      "scene": 0,
+      "coverage": 0.1632,
+      "cov_dense": 0.1473,
+      "opacity": 0.841,
+      "oi": 0.1367,
+      "coverage_avg": 0.1632,
+      "opacity_avg": 0.841,
+      "oi_avg": 0.1367,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 16.6,
+      "R_raw": 0.818,
+      "R": 0.822,
+      "angle": 26.4,
+      "dir": "Phải-Lên",
+      "tilt": 63.6,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 26.4,
+      "tilt_avg": 63.6,
+      "R_avg": 0.822,
+      "anchor": [
+        0.698,
+        0.5809
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 8.2,
+      "frame_index": 246,
+      "bbox": [
+        0.2753,
+        0.332,
+        0.9927,
+        0.7185
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2753,
+            0.332,
+            0.9927,
+            0.7185
+          ],
+          "conf": 0.871
+        }
+      ],
+      "fire": [],
+      "conf": 0.871,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.958,
+      "scene": 0,
+      "coverage": 0.164,
+      "cov_dense": 0.1481,
+      "opacity": 0.841,
+      "oi": 0.1377,
+      "coverage_avg": 0.164,
+      "opacity_avg": 0.841,
+      "oi_avg": 0.1377,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 15.2,
+      "R_raw": 0.965,
+      "R": 0.848,
+      "angle": 23.9,
+      "dir": "Phải-Lên",
+      "tilt": 66.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải-Lên",
+      "angle_avg": 23.9,
+      "tilt_avg": 66.1,
+      "R_avg": 0.848,
+      "anchor": [
+        0.6948,
+        0.5805
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 8.4,
+      "frame_index": 252,
+      "bbox": [
+        0.27,
+        0.3297,
+        0.993,
+        0.7182
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.27,
+            0.3297,
+            0.993,
+            0.7182
+          ],
+          "conf": 0.876
+        }
+      ],
+      "fire": [],
+      "conf": 0.876,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.963,
+      "scene": 0,
+      "coverage": 0.1644,
+      "cov_dense": 0.1483,
+      "opacity": 0.833,
+      "oi": 0.1378,
+      "coverage_avg": 0.1644,
+      "opacity_avg": 0.833,
+      "oi_avg": 0.1378,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 5.7,
+      "R_raw": 0.822,
+      "R": 0.869,
+      "angle": 19.7,
+      "dir": "Phải",
+      "tilt": 70.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 19.7,
+      "tilt_avg": 70.3,
+      "R_avg": 0.869,
+      "anchor": [
+        0.695,
+        0.5791
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 8.6,
+      "frame_index": 258,
+      "bbox": [
+        0.2621,
+        0.3222,
+        0.9947,
+        0.715
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2621,
+            0.3222,
+            0.9947,
+            0.715
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.946,
+      "scene": 0,
+      "coverage": 0.1667,
+      "cov_dense": 0.1483,
+      "opacity": 0.827,
+      "oi": 0.1378,
+      "coverage_avg": 0.1667,
+      "opacity_avg": 0.827,
+      "oi_avg": 0.1378,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 356.1,
+      "R_raw": 0.884,
+      "R": 0.882,
+      "angle": 10.9,
+      "dir": "Phải",
+      "tilt": 79.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 10.9,
+      "tilt_avg": 79.1,
+      "R_avg": 0.882,
+      "anchor": [
+        0.6945,
+        0.5752
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 8.8,
+      "frame_index": 264,
+      "bbox": [
+        0.2534,
+        0.3152,
+        0.9984,
+        0.7122
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2534,
+            0.3152,
+            0.9984,
+            0.7122
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.94,
+      "scene": 0,
+      "coverage": 0.1667,
+      "cov_dense": 0.1483,
+      "opacity": 0.825,
+      "oi": 0.1378,
+      "coverage_avg": 0.1667,
+      "opacity_avg": 0.825,
+      "oi_avg": 0.1378,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 354.6,
+      "R_raw": 0.886,
+      "R": 0.863,
+      "angle": 5.6,
+      "dir": "Phải",
+      "tilt": 84.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 5.6,
+      "tilt_avg": 84.4,
+      "R_avg": 0.863,
+      "anchor": [
+        0.6937,
+        0.5726
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 9.0,
+      "frame_index": 270,
+      "bbox": [
+        0.2578,
+        0.3101,
+        0.9967,
+        0.7088
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2578,
+            0.3101,
+            0.9967,
+            0.7088
+          ],
+          "conf": 0.88
+        }
+      ],
+      "fire": [],
+      "conf": 0.88,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.942,
+      "scene": 0,
+      "coverage": 0.1667,
+      "cov_dense": 0.1483,
+      "opacity": 0.821,
+      "oi": 0.1378,
+      "coverage_avg": 0.1667,
+      "opacity_avg": 0.821,
+      "oi_avg": 0.1378,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 332.5,
+      "R_raw": 0.597,
+      "R": 0.809,
+      "angle": 358.8,
+      "dir": "Phải",
+      "tilt": 91.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 358.8,
+      "tilt_avg": 91.2,
+      "R_avg": 0.809,
+      "anchor": [
+        0.6947,
+        0.5675
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 9.2,
+      "frame_index": 276,
+      "bbox": [
+        0.2652,
+        0.3058,
+        0.9931,
+        0.6975
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2652,
+            0.3058,
+            0.9931,
+            0.6975
+          ],
+          "conf": 0.877
+        }
+      ],
+      "fire": [],
+      "conf": 0.877,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.931,
+      "scene": 0,
+      "coverage": 0.1645,
+      "cov_dense": 0.1447,
+      "opacity": 0.819,
+      "oi": 0.1334,
+      "coverage_avg": 0.1645,
+      "opacity_avg": 0.819,
+      "oi_avg": 0.1334,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 327.2,
+      "R_raw": 0.687,
+      "R": 0.751,
+      "angle": 349.1,
+      "dir": "Phải",
+      "tilt": 100.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 349.1,
+      "tilt_avg": 100.9,
+      "R_avg": 0.751,
+      "anchor": [
+        0.6939,
+        0.5592
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 9.4,
+      "frame_index": 282,
+      "bbox": [
+        0.2647,
+        0.2981,
+        0.9949,
+        0.688
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2647,
+            0.2981,
+            0.9949,
+            0.688
+          ],
+          "conf": 0.883
+        }
+      ],
+      "fire": [],
+      "conf": 0.883,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.922,
+      "scene": 0,
+      "coverage": 0.1645,
+      "cov_dense": 0.1447,
+      "opacity": 0.817,
+      "oi": 0.1334,
+      "coverage_avg": 0.1645,
+      "opacity_avg": 0.817,
+      "oi_avg": 0.1334,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 341.5,
+      "R_raw": 0.713,
+      "R": 0.738,
+      "angle": 344.0,
+      "dir": "Phải",
+      "tilt": 106.0,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 344.0,
+      "tilt_avg": 106.0,
+      "R_avg": 0.738,
+      "anchor": [
+        0.6981,
+        0.5512
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 9.6,
+      "frame_index": 288,
+      "bbox": [
+        0.2667,
+        0.2831,
+        0.9974,
+        0.6918
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2667,
+            0.2831,
+            0.9974,
+            0.6918
+          ],
+          "conf": 0.872
+        }
+      ],
+      "fire": [],
+      "conf": 0.872,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.931,
+      "scene": 0,
+      "coverage": 0.1616,
+      "cov_dense": 0.1434,
+      "opacity": 0.811,
+      "oi": 0.1326,
+      "coverage_avg": 0.1616,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1326,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 347.2,
+      "R_raw": 0.71,
+      "R": 0.707,
+      "angle": 341.6,
+      "dir": "Phải",
+      "tilt": 108.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 341.6,
+      "tilt_avg": 108.4,
+      "R_avg": 0.707,
+      "anchor": [
+        0.6961,
+        0.5507
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 9.8,
+      "frame_index": 294,
+      "bbox": [
+        0.2726,
+        0.2725,
+        1.0,
+        0.6901
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2726,
+            0.2725,
+            1.0,
+            0.6901
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.915,
+      "scene": 0,
+      "coverage": 0.1594,
+      "cov_dense": 0.1414,
+      "opacity": 0.811,
+      "oi": 0.1303,
+      "coverage_avg": 0.1594,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1303,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 347.2,
+      "R_raw": 0.55,
+      "R": 0.645,
+      "angle": 339.0,
+      "dir": "Phải",
+      "tilt": 111.0,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 339.0,
+      "tilt_avg": 111.0,
+      "R_avg": 0.645,
+      "anchor": [
+        0.6966,
+        0.546
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 10.0,
+      "frame_index": 300,
+      "bbox": [
+        0.2785,
+        0.2689,
+        0.9946,
+        0.6776
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2785,
+            0.2689,
+            0.9946,
+            0.6776
+          ],
+          "conf": 0.871
+        }
+      ],
+      "fire": [],
+      "conf": 0.871,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.916,
+      "scene": 0,
+      "coverage": 0.1574,
+      "cov_dense": 0.1389,
+      "opacity": 0.811,
+      "oi": 0.1275,
+      "coverage_avg": 0.1574,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1275,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 344.1,
+      "R_raw": 0.58,
+      "R": 0.642,
+      "angle": 341.2,
+      "dir": "Phải",
+      "tilt": 108.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 341.2,
+      "tilt_avg": 108.8,
+      "R_avg": 0.642,
+      "anchor": [
+        0.6975,
+        0.5395
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 10.2,
+      "frame_index": 306,
+      "bbox": [
+        0.2915,
+        0.2609,
+        0.9913,
+        0.6673
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2915,
+            0.2609,
+            0.9913,
+            0.6673
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.913,
+      "scene": 0,
+      "coverage": 0.1515,
+      "cov_dense": 0.1339,
+      "opacity": 0.811,
+      "oi": 0.1229,
+      "coverage_avg": 0.1515,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1229,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 0.6,
+      "R_raw": 0.512,
+      "R": 0.609,
+      "angle": 347.5,
+      "dir": "Phải",
+      "tilt": 102.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 347.5,
+      "tilt_avg": 102.5,
+      "R_avg": 0.609,
+      "anchor": [
+        0.7038,
+        0.5298
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 10.4,
+      "frame_index": 312,
+      "bbox": [
+        0.3028,
+        0.2548,
+        0.9919,
+        0.6618
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3028,
+            0.2548,
+            0.9919,
+            0.6618
+          ],
+          "conf": 0.883
+        }
+      ],
+      "fire": [],
+      "conf": 0.883,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.903,
+      "scene": 0,
+      "coverage": 0.1479,
+      "cov_dense": 0.1316,
+      "opacity": 0.815,
+      "oi": 0.1207,
+      "coverage_avg": 0.1479,
+      "opacity_avg": 0.815,
+      "oi_avg": 0.1207,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 4.3,
+      "R_raw": 0.636,
+      "R": 0.592,
+      "angle": 352.5,
+      "dir": "Phải",
+      "tilt": 97.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 352.5,
+      "tilt_avg": 97.5,
+      "R_avg": 0.592,
+      "anchor": [
+        0.7066,
+        0.5252
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 10.6,
+      "frame_index": 318,
+      "bbox": [
+        0.3097,
+        0.2497,
+        0.991,
+        0.6545
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3097,
+            0.2497,
+            0.991,
+            0.6545
+          ],
+          "conf": 0.881
+        }
+      ],
+      "fire": [],
+      "conf": 0.881,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.913,
+      "scene": 0,
+      "coverage": 0.1445,
+      "cov_dense": 0.1283,
+      "opacity": 0.816,
+      "oi": 0.1178,
+      "coverage_avg": 0.1445,
+      "opacity_avg": 0.816,
+      "oi_avg": 0.1178,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 358.9,
+      "R_raw": 0.589,
+      "R": 0.568,
+      "angle": 355.2,
+      "dir": "Phải",
+      "tilt": 94.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 355.2,
+      "tilt_avg": 94.8,
+      "R_avg": 0.568,
+      "anchor": [
+        0.71,
+        0.5198
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 10.8,
+      "frame_index": 324,
+      "bbox": [
+        0.3314,
+        0.2507,
+        0.9888,
+        0.6573
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3314,
+            0.2507,
+            0.9888,
+            0.6573
+          ],
+          "conf": 0.88
+        }
+      ],
+      "fire": [],
+      "conf": 0.88,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.942,
+      "scene": 0,
+      "coverage": 0.1435,
+      "cov_dense": 0.1281,
+      "opacity": 0.818,
+      "oi": 0.1174,
+      "coverage_avg": 0.1435,
+      "opacity_avg": 0.818,
+      "oi_avg": 0.1174,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 11.0,
+      "R_raw": 0.689,
+      "R": 0.594,
+      "angle": 0.3,
+      "dir": "Phải",
+      "tilt": 89.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 0.3,
+      "tilt_avg": 89.7,
+      "R_avg": 0.594,
+      "anchor": [
+        0.7124,
+        0.5177
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 11.0,
+      "frame_index": 330,
+      "bbox": [
+        0.3295,
+        0.252,
+        0.9909,
+        0.6521
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3295,
+            0.252,
+            0.9909,
+            0.6521
+          ],
+          "conf": 0.881
+        }
+      ],
+      "fire": [],
+      "conf": 0.881,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.918,
+      "scene": 0,
+      "coverage": 0.1411,
+      "cov_dense": 0.1267,
+      "opacity": 0.823,
+      "oi": 0.1162,
+      "coverage_avg": 0.1411,
+      "opacity_avg": 0.823,
+      "oi_avg": 0.1162,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 10.8,
+      "R_raw": 0.726,
+      "R": 0.628,
+      "angle": 5.7,
+      "dir": "Phải",
+      "tilt": 84.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 5.7,
+      "tilt_avg": 84.3,
+      "R_avg": 0.628,
+      "anchor": [
+        0.7142,
+        0.5142
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 11.2,
+      "frame_index": 336,
+      "bbox": [
+        0.3381,
+        0.251,
+        0.9921,
+        0.651
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3381,
+            0.251,
+            0.9921,
+            0.651
+          ],
+          "conf": 0.881
+        }
+      ],
+      "fire": [],
+      "conf": 0.881,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.919,
+      "scene": 0,
+      "coverage": 0.1411,
+      "cov_dense": 0.1267,
+      "opacity": 0.823,
+      "oi": 0.1162,
+      "coverage_avg": 0.1411,
+      "opacity_avg": 0.823,
+      "oi_avg": 0.1162,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 17.2,
+      "R_raw": 0.9,
+      "R": 0.704,
+      "angle": 9.3,
+      "dir": "Phải",
+      "tilt": 80.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 9.3,
+      "tilt_avg": 80.7,
+      "R_avg": 0.704,
+      "anchor": [
+        0.7165,
+        0.5127
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 11.4,
+      "frame_index": 342,
+      "bbox": [
+        0.3496,
+        0.2512,
+        0.9908,
+        0.646
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3496,
+            0.2512,
+            0.9908,
+            0.646
+          ],
+          "conf": 0.882
+        }
+      ],
+      "fire": [],
+      "conf": 0.882,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.914,
+      "scene": 0,
+      "coverage": 0.1411,
+      "cov_dense": 0.1267,
+      "opacity": 0.823,
+      "oi": 0.1162,
+      "coverage_avg": 0.1411,
+      "opacity_avg": 0.823,
+      "oi_avg": 0.1162,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 11.9,
+      "R_raw": 0.912,
+      "R": 0.76,
+      "angle": 10.8,
+      "dir": "Phải",
+      "tilt": 79.2,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 10.8,
+      "tilt_avg": 79.2,
+      "R_avg": 0.76,
+      "anchor": [
+        0.7218,
+        0.5091
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 11.6,
+      "frame_index": 348,
+      "bbox": [
+        0.3205,
+        0.2496,
+        0.9951,
+        0.6486
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3205,
+            0.2496,
+            0.9951,
+            0.6486
+          ],
+          "conf": 0.88
+        }
+      ],
+      "fire": [],
+      "conf": 0.88,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.924,
+      "scene": 0,
+      "coverage": 0.1431,
+      "cov_dense": 0.1279,
+      "opacity": 0.823,
+      "oi": 0.1177,
+      "coverage_avg": 0.1431,
+      "opacity_avg": 0.823,
+      "oi_avg": 0.1177,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 15.7,
+      "R_raw": 0.949,
+      "R": 0.834,
+      "angle": 13.6,
+      "dir": "Phải",
+      "tilt": 76.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 13.6,
+      "tilt_avg": 76.4,
+      "R_avg": 0.834,
+      "anchor": [
+        0.716,
+        0.5106
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 11.8,
+      "frame_index": 354,
+      "bbox": [
+        0.3265,
+        0.2477,
+        0.9947,
+        0.6483
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3265,
+            0.2477,
+            0.9947,
+            0.6483
+          ],
+          "conf": 0.882
+        }
+      ],
+      "fire": [],
+      "conf": 0.882,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.927,
+      "scene": 0,
+      "coverage": 0.1434,
+      "cov_dense": 0.1281,
+      "opacity": 0.82,
+      "oi": 0.1178,
+      "coverage_avg": 0.1434,
+      "opacity_avg": 0.82,
+      "oi_avg": 0.1178,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 14.3,
+      "R_raw": 0.907,
+      "R": 0.878,
+      "angle": 14.1,
+      "dir": "Phải",
+      "tilt": 75.9,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 14.1,
+      "tilt_avg": 75.9,
+      "R_avg": 0.878,
+      "anchor": [
+        0.7165,
+        0.5103
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 12.0,
+      "frame_index": 360,
+      "bbox": [
+        0.317,
+        0.2423,
+        0.9959,
+        0.6486
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.317,
+            0.2423,
+            0.9959,
+            0.6486
+          ],
+          "conf": 0.877
+        }
+      ],
+      "fire": [],
+      "conf": 0.877,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.907,
+      "scene": 0,
+      "coverage": 0.1474,
+      "cov_dense": 0.1316,
+      "opacity": 0.819,
+      "oi": 0.1207,
+      "coverage_avg": 0.1474,
+      "opacity_avg": 0.819,
+      "oi_avg": 0.1207,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 11.8,
+      "R_raw": 0.947,
+      "R": 0.922,
+      "angle": 14.2,
+      "dir": "Phải",
+      "tilt": 75.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 14.2,
+      "tilt_avg": 75.8,
+      "R_avg": 0.922,
+      "anchor": [
+        0.7162,
+        0.5079
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 12.2,
+      "frame_index": 366,
+      "bbox": [
+        0.3089,
+        0.2403,
+        0.9952,
+        0.6468
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3089,
+            0.2403,
+            0.9952,
+            0.6468
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.901,
+      "scene": 0,
+      "coverage": 0.1478,
+      "cov_dense": 0.1316,
+      "opacity": 0.818,
+      "oi": 0.1207,
+      "coverage_avg": 0.1478,
+      "opacity_avg": 0.818,
+      "oi_avg": 0.1207,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 10.6,
+      "R_raw": 0.957,
+      "R": 0.934,
+      "angle": 12.9,
+      "dir": "Phải",
+      "tilt": 77.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 12.9,
+      "tilt_avg": 77.1,
+      "R_avg": 0.934,
+      "anchor": [
+        0.7129,
+        0.5063
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 12.4,
+      "frame_index": 372,
+      "bbox": [
+        0.311,
+        0.2317,
+        0.9938,
+        0.6443
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.311,
+            0.2317,
+            0.9938,
+            0.6443
+          ],
+          "conf": 0.874
+        }
+      ],
+      "fire": [],
+      "conf": 0.874,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.841,
+      "scene": 0,
+      "coverage": 0.1479,
+      "cov_dense": 0.1317,
+      "opacity": 0.817,
+      "oi": 0.1209,
+      "coverage_avg": 0.1479,
+      "opacity_avg": 0.817,
+      "oi_avg": 0.1209,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 11.1,
+      "R_raw": 0.965,
+      "R": 0.945,
+      "angle": 12.7,
+      "dir": "Phải",
+      "tilt": 77.3,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 12.7,
+      "tilt_avg": 77.3,
+      "R_avg": 0.945,
+      "anchor": [
+        0.7142,
+        0.5037
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 12.6,
+      "frame_index": 378,
+      "bbox": [
+        0.3097,
+        0.2256,
+        0.993,
+        0.6405
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.3097,
+            0.2256,
+            0.993,
+            0.6405
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.867,
+      "scene": 0,
+      "coverage": 0.148,
+      "cov_dense": 0.1317,
+      "opacity": 0.815,
+      "oi": 0.1209,
+      "coverage_avg": 0.148,
+      "opacity_avg": 0.815,
+      "oi_avg": 0.1209,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 10.0,
+      "R_raw": 0.967,
+      "R": 0.948,
+      "angle": 11.6,
+      "dir": "Phải",
+      "tilt": 78.4,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 11.6,
+      "tilt_avg": 78.4,
+      "R_avg": 0.948,
+      "anchor": [
+        0.7125,
+        0.5015
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 12.8,
+      "frame_index": 384,
+      "bbox": [
+        0.288,
+        0.2162,
+        0.9936,
+        0.6405
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.288,
+            0.2162,
+            0.9936,
+            0.6405
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.88,
+      "scene": 0,
+      "coverage": 0.1522,
+      "cov_dense": 0.1346,
+      "opacity": 0.811,
+      "oi": 0.1231,
+      "coverage_avg": 0.1522,
+      "opacity_avg": 0.811,
+      "oi_avg": 0.1231,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 6.0,
+      "R_raw": 0.951,
+      "R": 0.957,
+      "angle": 9.9,
+      "dir": "Phải",
+      "tilt": 80.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 9.9,
+      "tilt_avg": 80.1,
+      "R_avg": 0.957,
+      "anchor": [
+        0.7099,
+        0.5008
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 13.0,
+      "frame_index": 390,
+      "bbox": [
+        0.2806,
+        0.215,
+        0.9963,
+        0.641
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2806,
+            0.215,
+            0.9963,
+            0.641
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.879,
+      "scene": 0,
+      "coverage": 0.1525,
+      "cov_dense": 0.1348,
+      "opacity": 0.809,
+      "oi": 0.1238,
+      "coverage_avg": 0.1525,
+      "opacity_avg": 0.809,
+      "oi_avg": 0.1238,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 4.2,
+      "R_raw": 0.948,
+      "R": 0.956,
+      "angle": 8.4,
+      "dir": "Phải",
+      "tilt": 81.6,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 8.4,
+      "tilt_avg": 81.6,
+      "R_avg": 0.956,
+      "anchor": [
+        0.7089,
+        0.4995
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 13.2,
+      "frame_index": 396,
+      "bbox": [
+        0.2898,
+        0.2145,
+        0.9884,
+        0.6332
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2898,
+            0.2145,
+            0.9884,
+            0.6332
+          ],
+          "conf": 0.878
+        }
+      ],
+      "fire": [],
+      "conf": 0.878,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.921,
+      "scene": 0,
+      "coverage": 0.1559,
+      "cov_dense": 0.1371,
+      "opacity": 0.808,
+      "oi": 0.1256,
+      "coverage_avg": 0.1559,
+      "opacity_avg": 0.808,
+      "oi_avg": 0.1256,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 8.1,
+      "R_raw": 0.954,
+      "R": 0.956,
+      "angle": 7.9,
+      "dir": "Phải",
+      "tilt": 82.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 7.9,
+      "tilt_avg": 82.1,
+      "R_avg": 0.956,
+      "anchor": [
+        0.7083,
+        0.4948
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 13.4,
+      "frame_index": 402,
+      "bbox": [
+        0.2816,
+        0.211,
+        0.99,
+        0.6334
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2816,
+            0.211,
+            0.99,
+            0.6334
+          ],
+          "conf": 0.879
+        }
+      ],
+      "fire": [],
+      "conf": 0.879,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.909,
+      "scene": 0,
+      "coverage": 0.1567,
+      "cov_dense": 0.1379,
+      "opacity": 0.806,
+      "oi": 0.1266,
+      "coverage_avg": 0.1567,
+      "opacity_avg": 0.806,
+      "oi_avg": 0.1266,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 5.8,
+      "R_raw": 0.948,
+      "R": 0.953,
+      "angle": 6.9,
+      "dir": "Phải",
+      "tilt": 83.1,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 6.9,
+      "tilt_avg": 83.1,
+      "R_avg": 0.953,
+      "anchor": [
+        0.7044,
+        0.4937
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 13.6,
+      "frame_index": 408,
+      "bbox": [
+        0.2779,
+        0.2074,
+        0.9918,
+        0.6357
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2779,
+            0.2074,
+            0.9918,
+            0.6357
+          ],
+          "conf": 0.876
+        }
+      ],
+      "fire": [],
+      "conf": 0.876,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.909,
+      "scene": 0,
+      "coverage": 0.162,
+      "cov_dense": 0.1418,
+      "opacity": 0.804,
+      "oi": 0.1302,
+      "coverage_avg": 0.162,
+      "opacity_avg": 0.804,
+      "oi_avg": 0.1302,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 7.3,
+      "R_raw": 0.777,
+      "R": 0.915,
+      "angle": 6.3,
+      "dir": "Phải",
+      "tilt": 83.7,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 6.3,
+      "tilt_avg": 83.7,
+      "R_avg": 0.915,
+      "anchor": [
+        0.7028,
+        0.4926
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 13.8,
+      "frame_index": 414,
+      "bbox": [
+        0.2624,
+        0.2036,
+        0.9927,
+        0.6397
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2624,
+            0.2036,
+            0.9927,
+            0.6397
+          ],
+          "conf": 0.874
+        }
+      ],
+      "fire": [],
+      "conf": 0.874,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.916,
+      "scene": 0,
+      "coverage": 0.1666,
+      "cov_dense": 0.1454,
+      "opacity": 0.803,
+      "oi": 0.1338,
+      "coverage_avg": 0.1666,
+      "opacity_avg": 0.803,
+      "oi_avg": 0.1338,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 5.5,
+      "R_raw": 0.767,
+      "R": 0.879,
+      "angle": 6.2,
+      "dir": "Phải",
+      "tilt": 83.8,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 6.2,
+      "tilt_avg": 83.8,
+      "R_avg": 0.879,
+      "anchor": [
+        0.6974,
+        0.4935
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 14.0,
+      "frame_index": 420,
+      "bbox": [
+        0.2415,
+        0.2022,
+        0.9969,
+        0.6437
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2415,
+            0.2022,
+            0.9969,
+            0.6437
+          ],
+          "conf": 0.875
+        }
+      ],
+      "fire": [],
+      "conf": 0.875,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.913,
+      "scene": 0,
+      "coverage": 0.1746,
+      "cov_dense": 0.1509,
+      "opacity": 0.8,
+      "oi": 0.1392,
+      "coverage_avg": 0.1746,
+      "opacity_avg": 0.8,
+      "oi_avg": 0.1392,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 3.0,
+      "R_raw": 0.886,
+      "R": 0.866,
+      "angle": 6.0,
+      "dir": "Phải",
+      "tilt": 84.0,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 6.0,
+      "tilt_avg": 84.0,
+      "R_avg": 0.866,
+      "anchor": [
+        0.695,
+        0.4942
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 14.2,
+      "frame_index": 426,
+      "bbox": [
+        0.2301,
+        0.2031,
+        0.9925,
+        0.641
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2301,
+            0.2031,
+            0.9925,
+            0.641
+          ],
+          "conf": 0.884
+        }
+      ],
+      "fire": [],
+      "conf": 0.884,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.928,
+      "scene": 0,
+      "coverage": 0.1749,
+      "cov_dense": 0.1516,
+      "opacity": 0.799,
+      "oi": 0.1397,
+      "coverage_avg": 0.1749,
+      "opacity_avg": 0.799,
+      "oi_avg": 0.1397,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 1.5,
+      "R_raw": 0.944,
+      "R": 0.864,
+      "angle": 4.5,
+      "dir": "Phải",
+      "tilt": 85.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 4.5,
+      "tilt_avg": 85.5,
+      "R_avg": 0.864,
+      "anchor": [
+        0.6887,
+        0.4926
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 14.4,
+      "frame_index": 432,
+      "bbox": [
+        0.2283,
+        0.2042,
+        0.9934,
+        0.6403
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2283,
+            0.2042,
+            0.9934,
+            0.6403
+          ],
+          "conf": 0.885
+        }
+      ],
+      "fire": [],
+      "conf": 0.885,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.937,
+      "scene": 0,
+      "coverage": 0.1781,
+      "cov_dense": 0.155,
+      "opacity": 0.797,
+      "oi": 0.1426,
+      "coverage_avg": 0.1781,
+      "opacity_avg": 0.797,
+      "oi_avg": 0.1426,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 0.5,
+      "R_raw": 0.927,
+      "R": 0.86,
+      "angle": 3.4,
+      "dir": "Phải",
+      "tilt": 86.6,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 3.4,
+      "tilt_avg": 86.6,
+      "R_avg": 0.86,
+      "anchor": [
+        0.6881,
+        0.4908
+      ],
+      "anchor_src": "khoi"
+    },
+    {
+      "t": 14.6,
+      "frame_index": 438,
+      "bbox": [
+        0.2164,
+        0.2045,
+        0.9935,
+        0.6439
+      ],
+      "smoke_boxes": [
+        {
+          "bbox": [
+            0.2164,
+            0.2045,
+            0.9935,
+            0.6439
+          ],
+          "conf": 0.888
+        }
+      ],
+      "fire": [],
+      "conf": 0.888,
+      "label": "Khói Đen Độc Hại",
+      "cls_conf": 0.914,
+      "scene": 0,
+      "coverage": 0.1849,
+      "cov_dense": 0.1597,
+      "opacity": 0.796,
+      "oi": 0.1471,
+      "coverage_avg": 0.1849,
+      "opacity_avg": 0.796,
+      "oi_avg": 0.1471,
+      "level": "Đặc",
+      "flow_ok": true,
+      "flow_reason": "ok",
+      "fire_present_for_flow": false,
+      "flow_path_valid": null,
+      "flow_gate_reason": "khong_co_lua",
+      "flow_anchor": null,
+      "flow_region_bbox": null,
+      "flow_smoke_pixels": 0,
+      "angle_raw": 2.4,
+      "R_raw": 0.944,
+      "R": 0.893,
+      "angle": 2.5,
+      "dir": "Phải",
+      "tilt": 87.5,
+      "dir_state": "ok",
+      "dir_avg": "Phải",
+      "angle_avg": 2.5,
+      "tilt_avg": 87.5,
+      "R_avg": 0.893,
+      "anchor": [
+        0.6823,
+        0.4909
+      ],
+      "anchor_src": "khoi"
+    }
+  ],
+  "summary": {
+    "detected": true,
+    "smoke_label": "Khói Đen Độc Hại",
+    "smoke_conf": 0.9197317361831665,
+    "color_probs": {
+      "Khói Đen": 0.9197317361831665,
+      "Khói Trắng": 0.054380983114242554,
+      "Khói Xám": 0.025887276977300644
+    },
+    "opacity": 0.8093783783783783,
+    "coverage": 0.18986081081081083,
+    "oi": 0.15331621621621622,
+    "cov_dense": 0.16556486486486485,
+    "direction": "Phải",
+    "angle": 9.827741035223216,
+    "tilt": 80.17225896477679,
+    "R": 0.9647914758899209,
+    "dir_note": null,
+    "opacity_note": null,
+    "scene_cuts": [],
+    "dir_pairs": 72,
+    "dir_ok": 69,
+    "dir_rate": 0.9583333333333334,
+    "dir_rejected": {
+      "R_thap": 3
+    },
+    "level": "Đặc"
+  },
+  "avg_sec": 3.0,
+  "latency_s": 43.9,
+  "ai": {
+    "muc_do": "Cao",
+    "do_chac_chan": "Cao",
+    "tom_tat": "Phát hiện khói đen độc hại bao phủ trung bình 19.0% diện tích khung hình, độ đục quang học 80.9% (chỉ số OI = 0.153, mức Đặc).",
+    "can_cu": [
+      {
+        "truong": "mau_khoi.nhan",
+        "nhan_dinh": "Phân loại ResNet18 xác định Khói Đen Độc Hại (độ tin cậy 92%)."
+      },
+      {
+        "truong": "che_khuat.oi_tb",
+        "nhan_dinh": "Chỉ số che khuất OI trung bình đạt 0.153 (độ phủ 19.0%, độ đục 80.9%)."
+      }
+    ],
+    "huong_lan": "Khói lan theo hướng Phải (góc 10.0°, R = 0.96).",
+    "gia_thuyet_vat_lieu": [
+      {
+        "ten": "Nhựa tổng hợp / Xăng dầu / Vật liệu cách nhiệt",
+        "do_ung_ho": "Cao",
+        "ly_do": "Dựa trên đặc trưng khói đen độc hại và mức độ cản quang trên mặt phẳng ảnh."
+      }
+    ],
+    "khuyen_nghi": [
+      "Bắt buộc trang bị bình thở độc lập (SCBA) và mặt nạ phòng độc do khói đen đặc tiềm ẩn khí độc từ nhựa, xăng dầu hoặc hóa chất.",
+      "Ưu tiên bố trí xe chỉ huy và mũi tấn công tiếp cận từ phía ngược hướng khói lan (Phải) để đảm bảo tầm nhìn."
+    ],
+    "han_che": [
+      "Nhận định được tổng hợp từ chỉ số thị giác 2D và hệ thống luật cứng an toàn."
+    ],
+    "status": "ok",
+    "model": "rule-guardrail",
+    "muc_do_luat": "Cao",
+    "muc_do_ai": "Cao",
+    "muc_do_cuoi": "Cao",
+    "bi_luat_nang_muc": false,
+    "canh_bao": [
+      "khong_thay_lua"
+    ],
+    "latency_s": 1.23
+  },
+  "ai_evidence": {
+    "video": {
+      "thoi_luong_s": 14.6,
+      "so_khung_mau": 74,
+      "tan_so_mau_fps": 5,
+      "diem_chuyen_canh_s": []
+    },
+    "phat_hien": {
+      "ti_le_khung_co_khoi": 1.0,
+      "ti_le_khung_co_lua": 0.0,
+      "thoi_diem_thay_lua_dau_tien_s": null,
+      "yolo_conf_khoi_tb": 0.88,
+      "yolo_conf_khoi_max": 0.9
+    },
+    "mau_khoi": {
+      "nhan": "Khói Đen Độc Hại",
+      "do_tin_cay": 0.92,
+      "xac_suat": {
+        "Khói Đen": 0.92,
+        "Khói Trắng": 0.05,
+        "Khói Xám": 0.03
+      },
+      "phieu_bau_theo_khung": {
+        "Khói Đen Độc Hại": 74
+      }
+    },
+    "che_khuat": {
+      "do_duc_tb": 0.809,
+      "phu_tb": 0.19,
+      "oi_tb": 0.153,
+      "oi_dinh": 0.187,
+      "muc_theo_do_duc": "Đặc",
+      "so_khung_do_duoc": 74,
+      "ti_le_khung_do_duoc": 1.0,
+      "xu_huong": "giam",
+      "doan_che_khuat_nang_s": [],
+      "chuoi_thoi_gian": [
+        {
+          "t": 0.0,
+          "oi": 0.1866,
+          "phu": 0.2334,
+          "do_duc": 0.799
+        },
+        {
+          "t": 1.2,
+          "oi": 0.1816,
+          "phu": 0.2273,
+          "do_duc": 0.801
+        },
+        {
+          "t": 2.6,
+          "oi": 0.1793,
+          "phu": 0.2207,
+          "do_duc": 0.813
+        },
+        {
+          "t": 3.8,
+          "oi": 0.1807,
+          "phu": 0.2236,
+          "do_duc": 0.808
+        },
+        {
+          "t": 5.2,
+          "oi": 0.1786,
+          "phu": 0.2253,
+          "do_duc": 0.794
+        },
+        {
+          "t": 6.6,
+          "oi": 0.1782,
+          "phu": 0.2302,
+          "do_duc": 0.774
+        },
+        {
+          "t": 7.8,
+          "oi": 0.1367,
+          "phu": 0.1625,
+          "do_duc": 0.842
+        },
+        {
+          "t": 9.2,
+          "oi": 0.1334,
+          "phu": 0.1645,
+          "do_duc": 0.819
+        },
+        {
+          "t": 10.6,
+          "oi": 0.1178,
+          "phu": 0.1445,
+          "do_duc": 0.816
+        },
+        {
+          "t": 11.8,
+          "oi": 0.1178,
+          "phu": 0.1434,
+          "do_duc": 0.82
+        },
+        {
+          "t": 13.2,
+          "oi": 0.1256,
+          "phu": 0.1559,
+          "do_duc": 0.808
+        },
+        {
+          "t": 14.6,
+          "oi": 0.1471,
+          "phu": 0.1849,
+          "do_duc": 0.796
+        }
+      ]
+    },
+    "huong_lan": {
+      "xac_dinh": true,
+      "huong": "Phải",
+      "goc_do": 10.0,
+      "tilt_do": 80.0,
+      "R": 0.96,
+      "so_cap_khung_hop_le": 72,
+      "so_cap_khung_ra_huong": 69,
+      "ti_le_khung_ra_huong": 0.96,
+      "ly_do_bi_loai": {
+        "R_thap": 3
+      },
+      "ly_do_chua_xac_dinh": null,
+      "mui_ten_xuat_phat_tu_lua": 0.0
+    },
+    "nguong_he_thong": {
+      "muc_do_duc": {
+        "nhe_duoi": 0.25,
+        "vua_duoi": 0.55
+      },
+      "oi_che_khuat_nang": {
+        "bat": 0.5,
+        "tat": 0.4
+      },
+      "do_duc_toi_thieu_la_khoi": 0.18,
+      "yolo_conf_khoi": 0.25,
+      "yolo_conf_lua": 0.4,
+      "R_toi_thieu_moi_khung": 0.5,
+      "R_toi_thieu_ca_video": 0.3,
+      "so_cap_khung_toi_thieu": 3,
+      "khoang_cach_cap_khung_s": 0.4,
+      "ti_le_lua_nang_muc": 0.15
+    },
+    "chat_luong_du_lieu": {
+      "canh_bao": [
+        "khong_thay_lua"
+      ]
+    },
+    "ket_luan_theo_luat": {
+      "muc_do": "Cao",
+      "cach_tinh": "muc_theo_do_duc quy đổi Nhẹ/Vừa/Đặc thành Thấp/Trung bình/Cao; nâng thêm 1 mức nếu ti_le_khung_co_lua >= ti_le_lua_nang_muc"
+    }
+  },
+  "title": "Khói Đen Độc Hại · snaptik.vn_7697465212353400080",
+  "timing": {
+    "tong_s": 43.885,
+    "video_s": 14.6,
+    "so_khung": 74,
+    "buoc_s": {
+      "doc_giai_ma_video": 0.255,
+      "resize_khung_hinh": 0.093,
+      "yolo_phat_hien": 15.447,
+      "resnet_phan_loai_mau": 4.505,
+      "luu_anh_snapshot": 0.097,
+      "chuyen_canh": 0.108,
+      "hieu_chinh_mau": 0.001,
+      "che_khuat_dcp_oi": 1.766,
+      "optical_flow": 1.794,
+      "tong_hop_ket_qua": 0.063,
+      "tong_hop_video": 0.001,
+      "dong_goi_bang_chung": 0.0,
+      "gemini_suy_luan": 1.228,
+      "xuat_video_da_xu_ly": 15.998
+    },
+    "khac_s": 2.531,
+    "he_so_thoi_gian_thuc": 3.006,
+    "moi_khung_ms": {
+      "doc_giai_ma_video": 3.45,
+      "resize_khung_hinh": 1.26,
+      "yolo_phat_hien": 208.74,
+      "luu_anh_snapshot": 1.31,
+      "che_khuat_dcp_oi": 23.86,
+      "optical_flow": 24.24
+    },
+    "resnet_ms_moi_lan": 60.87,
+    "resnet_so_lan": 74,
+    "yolo_ms_moi_anh": {
+      "preprocess": 1.86,
+      "inference": 202.64,
+      "postprocess": 1.37
+    }
+  },
+  "json_url": "/api/alerts/121c42eb/json/download",
+  "json_figure_url": "/api/alerts/121c42eb/json/figure"
+}

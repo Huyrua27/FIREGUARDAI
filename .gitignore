@@ -1,0 +1,16 @@
+# Video thô / video người dân gửi / ảnh chụp tạm (nặng, không cần cho GitHub Pages)
+video/
+video_test/
+citizen_uploads/
+processed_videos/
+snapshots/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Khóa API (bí mật)
+gemini_api_key.txt

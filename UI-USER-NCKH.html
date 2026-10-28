@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>VNeID - Tiện ích Báo Cháy Khẩn Cấp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --vneid-red: #d32f2f;
+            --vneid-dark-red: #b71c1c;
+            --vneid-gold: #ffc107;
+            --bg-body: #f4f6f8;
+            --bg-card: #ffffff;
+            --text-main: #202124;
+            --text-muted: #5f6368;
+            --border-color: #e0e0e0;
+            --success: #1e8e3e;
+            --blue-action: #1a73e8;
+        }
+
+        * { 
+            margin: 0; padding: 0; box-sizing: border-box; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            padding: 24px;
+        }
+
+        .iphone-device-frame {
+            width: 393px;
+            height: 852px;
+            background-color: var(--bg-body);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 0 10px #1c1c1e, 0 0 0 12px #3a3a3c;
+            border-radius: 48px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .ios-status-bar {
+            height: 48px;
+            background-color: var(--vneid-red);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 24px 8px 24px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            z-index: 20;
+            flex-shrink: 0;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 10px; left: 50%;
+            transform: translateX(-50%);
+            width: 110px; height: 28px;
+            background-color: #000;
+            border-radius: 20px;
+            z-index: 30;
+        }
+
+        .header {
+            background-color: var(--vneid-red);
+            color: white;
+            padding: 8px 16px 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        .header-title {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 15px; font-weight: 700; text-transform: uppercase;
+        }
+
+        /* 🖼️ Logo VNeID chuẩn Vector SVG khớp thiết kế thực tế */
+        .vneid-logo-icon {
+            width: 34px; height: 34px; background: transparent;
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .user-badge {
+            font-size: 11px; background: rgba(255,255,255,0.25);
+            padding: 4px 8px; border-radius: 12px; font-weight: 600;
+        }
+
+        .content-scrollable {
+            flex: 1; overflow-y: auto; padding: 12px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 14px; border: 1px solid var(--border-color);
+            overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.03); flex-shrink: 0;
+        }
+
+        .card-header {
+            padding: 8px 12px; font-size: 13px; font-weight: 600;
+            color: var(--vneid-red); background: #fafafa;
+            border-bottom: 1px solid var(--border-color);
+            display: flex; align-items: center; gap: 6px;
+        }
+
+        .camera-box {
+            position: relative; width: 100%; height: 220px;
+            background: #000; display: flex; align-items: center; justify-content: center;
+        }
+
+        #live-camera { width: 100%; height: 100%; object-fit: cover; }
+
+        .scanner-overlay {
+            position: absolute; top: 15%; left: 15%; right: 15%; bottom: 25%;
+            border: 2px dashed var(--vneid-gold); pointer-events: none;
+        }
+
+        .scanner-overlay::after {
+            content: "QUÉT KHÓI HIỆN TRƯỜNG";
+            position: absolute; top: -20px; left: 0;
+            color: var(--vneid-gold); font-size: 9px; font-weight: bold;
+            background: rgba(0,0,0,0.7); padding: 2px 5px; border-radius: 4px;
+        }
+
+        .recording-tag {
+            position: absolute; top: 8px; right: 8px;
+            background: rgba(220, 0, 0, 0.9); color: white;
+            padding: 3px 8px; border-radius: 10px; font-size: 11px;
+            font-weight: bold; display: none; align-items: center; gap: 6px;
+        }
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        .camera-controls {
+            padding: 10px; display: flex; gap: 8px;
+            background: white; justify-content: center;
+        }
+
+        .btn-action {
+            flex: 1; height: 40px; border: none; border-radius: 10px;
+            font-size: 13px; font-weight: 600; color: white; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .btn-snap { background: var(--blue-action); }
+        .btn-rec { background: var(--vneid-red); }
+        .btn-rec.recording { background: #333; }
+
+        .gps-info {
+            padding: 8px 12px; font-size: 12px;
+            display: flex; flex-direction: column; gap: 4px;
+            background: #fdfdfd; color: var(--text-main);
+        }
+        .gps-row { display: flex; align-items: center; justify-content: space-between; }
+        
+        .mini-map {
+            width: 100%; height: 90px; background: #e9ecef;
+            border-top: 1px solid var(--border-color);
+        }
+        .mini-map iframe { width: 100%; height: 100%; border: none; }
+
+        .upload-section {
+            padding: 10px 12px; display: flex; align-items: center; gap: 10px;
+        }
+        .progress-ring-box {
+            position: relative; width: 36px; height: 36px; border-radius: 50%;
+            background: conic-gradient(var(--blue-action) 0deg, #e0e0e0 0deg);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0; display: none;
+        }
+        .progress-ring-box::before {
+            content: ""; position: absolute; width: 28px; height: 28px;
+            background: white; border-radius: 50%;
+        }
+        .progress-num { position: relative; font-size: 10px; font-weight: bold; }
+        .upload-status-text { font-size: 12px; color: var(--text-muted); flex: 1; line-height: 1.3; }
+
+        .history-list {
+            max-height: 100px; overflow-y: auto; padding: 8px 12px;
+            display: flex; flex-direction: column; gap: 6px;
+        }
+        .history-item {
+            display: flex; align-items: center; justify-content: space-between;
+            font-size: 11px; padding: 6px 8px; background: #f8f9fa;
+            border-radius: 6px; border: 1px solid var(--border-color);
+        }
+
+        .iphone-home-bar {
+            height: 22px; background-color: var(--bg-body);
+            display: flex; justify-content: center; align-items: center; flex-shrink: 0;
+        }
+        .home-indicator-line { width: 110px; height: 4px; background-color: #d1d1d6; border-radius: 2px; }
+
+        /* MODAL & TIKTOK STYLE TRIMMER */
+        .modal-overlay { 
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.6); display: flex; align-items: center; 
+            justify-content: center; z-index: 1000; padding: 16px; 
+        }
+        .modal-box { 
+            background: #ffffff; color: var(--text-main); width: 100%; max-width: 340px; padding: 20px; 
+            border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+            border: 1px solid var(--border-color);
+        }
+        .modal-box h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--vneid-red); }
+        .modal-box p { font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
+        
+        .preview-container {
+            width: 100%; max-height: 140px; background: #000; border-radius: 8px;
+            overflow: hidden; margin-bottom: 10px; display: flex; align-items: center; justify-content: center;
+        }
+        .preview-container img, .preview-container video { width: 100%; max-height: 140px; object-fit: contain; }
+        
+        .tiktok-trimmer {
+            margin-bottom: 12px; display: none; text-align: left;
+        }
+        .tiktok-trimmer label { font-size: 11px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 6px; }
+        
+        .filmstrip-container {
+            position: relative; width: 100%; height: 50px; background: #e9ecef;
+            border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color);
+        }
+        .filmstrip-track {
+            display: flex; height: 100%; width: 100%; align-items: center; justify-content: space-around;
+            opacity: 0.8;
+        }
+        .filmstrip-frame {
+            width: 30px; height: 42px; background: #ced4da; border-radius: 2px; border: 1px dashed #adb5bd;
+            flex-shrink: 0;
+        }
+        
+        .trim-window-overlay {
+            position: absolute; top: 0; bottom: 0; left: 10%; right: 30%;
+            border: 3px solid var(--vneid-gold); border-radius: 4px;
+            background: rgba(255, 193, 7, 0.2); pointer-events: none;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .window-handle {
+            width: 10px; height: 100%; background: var(--vneid-gold); border-radius: 2px; pointer-events: auto;
+            box-shadow: 0 0 4px rgba(0,0,0,0.3);
+        }
+
+        .dual-range-container {
+            position: relative; width: 100%; height: 0px; margin-top: -50px; z-index: 10;
+        }
+        .trim-slider-input {
+            position: absolute; width: 100%; height: 50px; background: none;
+            pointer-events: none; -webkit-appearance: none; appearance: none;
+        }
+        .trim-slider-input::-webkit-slider-thumb {
+            pointer-events: auto; width: 14px; height: 50px; border-radius: 4px;
+            background: var(--vneid-gold); cursor: ew-resize; border: 1px solid #b8860b;
+            -webkit-appearance: none; appearance: none;
+        }
+
+        .trim-time-label {
+            display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 56px;
+        }
+
+        .editor-input {
+            width: 100%; padding: 8px 10px; background: #fff; border: 1px solid var(--border-color);
+            color: var(--text-main); border-radius: 8px; font-size: 12px; margin-bottom: 12px; outline: none;
+        }
+        .editor-input:focus { border-color: var(--vneid-red); }
+        .editor-input::placeholder { color: #aaa; }
+        
+        .editor-actions { display: flex; gap: 8px; }
+        .btn-cancel { background: #e0e0e0; color: var(--text-main); border: none; height: 38px; border-radius: 8px; flex: 1; font-weight: 600; font-size: 12px; cursor: pointer; }
+        .btn-confirm { background: var(--vneid-red); color: white; border: none; height: 38px; border-radius: 8px; flex: 1; font-weight: 600; font-size: 12px; cursor: pointer; box-shadow: 0 2px 4px rgba(211,47,47,0.3); }
+    </style>
+</head>
+<body>
+
+    <!-- Popup Xin quyền -->
+    <div class="modal-overlay" id="permissionModal">
+        <div class="modal-box">
+            <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: var(--vneid-red); margin-bottom: 8px;"></i>
+            <h3>Xác thực Không gian</h3>
+            <p>Tiện ích VNeID yêu cầu quyền Camera, GPS & Cảm biến hướng để ghi nhận hiện trường.</p>
+            <button class="btn-modal" onclick="startApp()" style="background:var(--vneid-red); color:white; border:none; height:40px; border-radius:10px; width:100%; font-weight:600; cursor:pointer; margin-top: 4px;">Đồng ý & Truy cập</button>
+        </div>
+    </div>
+
+    <!-- Modal Cắt clip kiểu TikTok -->
+    <div class="modal-overlay" id="editorModal" style="display: none;">
+        <div class="modal-box">
+            <h3><i class="fa-solid fa-scissors" style="color:var(--vneid-gold);"></i> Chọn đoạn Video (TikTok Style)</h3>
+            <p>Kéo 2 đầu màu vàng để tùy chỉnh đoạn video hiện trường.</p>
+            
+            <div class="preview-container" id="preview-box"></div>
+
+            <div class="tiktok-trimmer" id="trim-section">
+                <label><i class="fa-solid fa-film"></i> Vùng chọn thời gian:</label>
+                <div class="filmstrip-container" id="film-container">
+                    <div class="filmstrip-track">
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                        <div class="filmstrip-frame"></div>
+                    </div>
+                    <div class="trim-window-overlay" id="trim-window-overlay">
+                        <div class="window-handle"></div>
+                        <div class="window-handle"></div>
+                    </div>
+                </div>
+                <div class="dual-range-container">
+                    <input type="range" class="trim-slider-input" id="slider-left" min="0" max="10" step="0.1" value="1" oninput="syncDualTrimmer()">
+                    <input type="range" class="trim-slider-input" id="slider-right" min="0" max="10" step="0.1" value="7" oninput="syncDualTrimmer()">
+                </div>
+                <div class="trim-time-label">
+                    <span id="trim-start-txt">1.0s</span>
+                    <span style="color:var(--vneid-red); font-weight:bold;" id="trim-center-txt">Đoạn chọn: 1.0s - 7.0s</span>
+                    <span id="trim-end-txt">10.0s</span>
+                </div>
+            </div>
+
+            <input type="text" class="editor-input" id="note-input" placeholder="Nhập mô tả chi tiết sự cố (vd: Khói đen từ khu dân cư)...">
+            
+            <div class="editor-actions">
+                <button class="btn-cancel" onclick="closeEditor(false)">Hủy bỏ</button>
+                <button class="btn-confirm" onclick="closeEditor(true)">Xác nhận Gửi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Khung iPhone -->
+    <div class="iphone-device-frame">
+        <div class="ios-status-bar">
+            <div class="dynamic-island"></div>
+            <span>9:41</span>
+            <div>
+                <i class="fa-solid fa-signal" style="font-size: 11px; margin-right: 3px;"></i>
+                <i class="fa-solid fa-wifi" style="font-size: 11px; margin-right: 3px;"></i>
+                <i class="fa-solid fa-battery-full" style="font-size: 11px;"></i>
+            </div>
+        </div>
+
+        <!-- Header tích hợp chuẩn logo VNeID thực tế (Nền trắng bo góc, khung lục giác đỏ & huy hiệu vàng ở giữa) -->
+        <header class="header">
+            <div class="header-title">
+                <div class="vneid-logo-icon">
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <!-- Nền trắng bo góc squircle -->
+                        <rect x="4" y="4" width="92" height="92" rx="24" fill="#ffffff"/>
+                        <!-- Khung đa giác/lục giác đỏ bên ngoài -->
+                        <polygon points="50,12 82,28 82,72 50,88 18,72 18,28" fill="#d32f2f"/>
+                        <polygon points="50,18 76,32 76,68 50,82 24,68 24,32" fill="#b71c1c"/>
+                        <!-- Vòng tròn vàng trung tâm với dấu tích xác thực -->
+                        <circle cx="50" cy="50" r="18" fill="#ffc107"/>
+                        <path d="M41,50 L47,56 L59,40" fill="none" stroke="#b71c1c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Báo Cháy Khẩn Cấp</span>
+            </div>
+            <div class="user-badge">
+                <i class="fa-solid fa-shield-check"></i> Đã định danh
+            </div>
+        </header>
+
+        <div class="content-scrollable">
+            
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-camera-retro"></i> Camera Giám sát AI
+                </div>
+                <div class="camera-box">
+                    <video id="live-camera" autoplay playsinline muted></video>
+                    <div class="scanner-overlay"></div>
+                    <div class="recording-tag" id="rec-tag">
+                        <i class="fa-solid fa-circle blink"></i> <span id="rec-timer">00:00</span>
+                    </div>
+                </div>
+                <div class="camera-controls">
+                    <button class="btn-action btn-snap" onclick="triggerAction('image')">
+                        <i class="fa-solid fa-camera"></i> Chụp ảnh
+                    </button>
+                    <button class="btn-action btn-rec" id="btn-rec" onclick="toggleRecordState()">
+                        <i class="fa-solid fa-video"></i> Quay Video
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-location-dot"></i> Tọa độ GPS & Hướng Camera
+                </div>
+                <div class="gps-info">
+                    <div class="gps-row">
+                        <span><i class="fa-solid fa-satellite-dish" style="color:var(--blue-action);"></i> <b id="coords-val">Đang lấy tọa độ...</b></span>
+                    </div>
+                    <div class="gps-row">
+                        <span><i class="fa-solid fa-compass" style="color:var(--vneid-red);"></i> Hướng ống kính: <b id="heading-val">Đang định hướng...</b></span>
+                    </div>
+                </div>
+                <div class="mini-map" id="map-box">
+                    <div style="display:flex; height:100%; align-items:center; justify-content:center; font-size:11px; color:#888;">Chờ bản đồ...</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Trạng thái Đồng bộ CSDL
+                </div>
+                <div class="upload-section">
+                    <div class="progress-ring-box" id="ring-box">
+                        <span class="progress-num" id="ring-num">0%</span>
+                    </div>
+                    <div class="upload-status-text" id="upload-status-label">
+                        Hệ thống sẵn sàng tiếp nhận hình ảnh/video từ camera hiện trường.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fa-solid fa-list-check"></i> Nhật ký Gửi Cơ quan chức năng
+                </div>
+                <div class="history-list" id="history-container">
+                    <div class="history-item" style="color:#888; justify-content:center; background: transparent; border: none;">
+                        Chưa có dữ liệu gửi đi trong phiên này.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="iphone-home-bar">
+            <div class="home-indicator-line"></div>
+        </div>
+    </div>
+
+    <script>
+        let isRecording = false;
+        let isUploading = false;
+        let mediaRecorder;
+        let recordedChunks = [];
+        let recordStartTime;
+        let timerInterval;
+        let currentCapturedBlob = null;
+        let currentCapturedType = null;
+        let videoDuration = 10;
+
+        function startApp() {
+            document.getElementById('permissionModal').style.display = 'none';
+            initCamera();
+            initGPS();
+            initCompass();
+        }
+
+        async function initCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { facingMode: 'environment' },
+                    audio: true
+                });
+                document.getElementById('live-camera').srcObject = stream;
+                
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = (event) => {
+                    if (event.data.size > 0) recordedChunks.push(event.data);
+                };
+                mediaRecorder.onstop = () => {
+                    currentCapturedBlob = new Blob(recordedChunks, { type: 'video/mp4' });
+                    currentCapturedType = 'video';
+                    videoDuration = Math.max(3, (Date.now() - recordStartTime) / 1000);
+                    showEditorModal(currentCapturedBlob, 'video');
+                };
+            } catch (err) {
+                alert("Không thể mở Camera. Vui lòng cấp quyền trên trình duyệt.");
+            }
+        }
+
+        function initGPS() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        let lat = pos.coords.latitude;
+                        let lon = pos.coords.longitude;
+                        document.getElementById('coords-val').innerText = `${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+                        
+                        let offset = 0.003;
+                        let bbox = `${lon-offset},${lat-offset},${lon+offset},${lat+offset}`;
+                        document.getElementById('map-box').innerHTML = `<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lon}"></iframe>`;
+                    },
+                    () => {
+                        document.getElementById('coords-val').innerText = "Không lấy được GPS";
+                    },
+                    { enableHighAccuracy: true }
+                );
+            }
+        }
+
+        function initCompass() {
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', (event) => {
+                    let heading = event.alpha;
+                    if (heading !== null) {
+                        let direction = "Bắc (N)";
+                        if (heading >= 22.5 && heading < 67.5) direction = "Đông Bắc (NE)";
+                        else if (heading >= 67.5 && heading < 112.5) direction = "Đông (E)";
+                        else if (heading >= 112.5 && heading < 157.5) direction = "Đông Nam (SE)";
+                        else if (heading >= 157.5 && heading < 202.5) direction = "Nam (S)";
+                        else if (heading >= 202.5 && heading < 247.5) direction = "Tây Nam (SW)";
+                        else if (heading >= 247.5 && heading < 292.5) direction = "Tây (W)";
+                        else if (heading >= 292.5 && heading < 337.5) direction = "Tây Bắc (NW)";
+                        
+                        document.getElementById('heading-val').innerText = `${Math.round(heading)}° (${direction})`;
+                    }
+                }, true);
+            }
+        }
+
+        function triggerAction(type) {
+            if (isUploading || isRecording) return;
+            
+            const video = document.getElementById('live-camera');
+            const canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth || 640;
+            canvas.height = video.videoHeight || 480;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            canvas.toBlob((blob) => {
+                currentCapturedBlob = blob;
+                currentCapturedType = 'image';
+                showEditorModal(blob, 'image');
+            }, 'image/jpeg');
+        }
+
+        function toggleRecordState() {
+            if (isUploading) return;
+            const btnRec = document.getElementById('btn-rec');
+            const tag = document.getElementById('rec-tag');
+            
+            isRecording = !isRecording;
+            if (isRecording) {
+                recordedChunks = [];
+                mediaRecorder.start();
+                recordStartTime = Date.now();
+                
+                btnRec.innerHTML = '<i class="fa-solid fa-stop"></i> Dừng Quay';
+                btnRec.classList.add('recording');
+                tag.style.display = 'flex';
+                
+                timerInterval = setInterval(() => {
+                    let secElapsed = Math.floor((Date.now() - recordStartTime) / 1000);
+                    let m = String(Math.floor(secElapsed / 60)).padStart(2, '0');
+                    let s = String(secElapsed % 60).padStart(2, '0');
+                    document.getElementById('rec-timer').innerText = `${m}:${s}`;
+                }, 1000);
+            } else {
+                mediaRecorder.stop();
+                clearInterval(timerInterval);
+                document.getElementById('rec-timer').innerText = "00:00";
+                
+                btnRec.innerHTML = '<i class="fa-solid fa-video"></i> Quay Video';
+                btnRec.classList.remove('recording');
+                tag.style.display = 'none';
+            }
+        }
+
+        function showEditorModal(blob, type) {
+            const previewBox = document.getElementById('preview-box');
+            const trimSection = document.getElementById('trim-section');
+            previewBox.innerHTML = '';
+            
+            let url = URL.createObjectURL(blob);
+            if (type === 'image') {
+                previewBox.innerHTML = `<img src="${url}" alt="Preview">`;
+                trimSection.style.display = 'none';
+            } else {
+                previewBox.innerHTML = `<video src="${url}" controls autoplay></video>`;
+                trimSection.style.display = 'block';
+                
+                const leftSlider = document.getElementById('slider-left');
+                const rightSlider = document.getElementById('slider-right');
+                
+                leftSlider.max = videoDuration;
+                rightSlider.max = videoDuration;
+                
+                leftSlider.value = 0;
+                rightSlider.value = videoDuration;
+                
+                document.getElementById('trim-start-txt').innerText = `0.0s`;
+                document.getElementById('trim-end-txt').innerText = `${videoDuration.toFixed(1)}s`;
+                syncDualTrimmer();
+            }
+            
+            document.getElementById('note-input').value = "";
+            document.getElementById('editorModal').style.display = 'flex';
+        }
+
+        function syncDualTrimmer() {
+            const leftSlider = document.getElementById('slider-left');
+            const rightSlider = document.getElementById('slider-right');
+            const overlay = document.getElementById('trim-window-overlay');
+            
+            let valLeft = parseFloat(leftSlider.value);
+            let valRight = parseFloat(rightSlider.value);
+            
+            if (valLeft >= valRight) {
+                valLeft = Math.max(0, valRight - 0.5);
+                leftSlider.value = valLeft;
+            }
+            
+            let percentLeft = (valLeft / videoDuration) * 100;
+            let percentRight = 100 - (valRight / videoDuration) * 100;
+            
+            overlay.style.left = percentLeft + '%';
+            overlay.style.right = percentRight + '%';
+            
+            document.getElementById('trim-start-txt').innerText = `${valLeft.toFixed(1)}s`;
+            document.getElementById('trim-end-txt').innerText = `${valRight.toFixed(1)}s`;
+            document.getElementById('trim-center-txt').innerText = `Đoạn chọn: ${valLeft.toFixed(1)}s - ${valRight.toFixed(1)}s`;
+        }
+
+        function closeEditor(isConfirmed) {
+            document.getElementById('editorModal').style.display = 'none';
+            if (isConfirmed) {
+                let note = document.getElementById('note-input').value;
+                let trimInfo = "";
+                if (currentCapturedType === 'video') {
+                    let start = document.getElementById('slider-left').value;
+                    let end = document.getElementById('slider-right').value;
+                    trimInfo = ` [Đoạn cắt TikTok: ${start}s - ${end}s]`;
+                }
+                simulateUpload(currentCapturedType, note + trimInfo);
+            }
+        }
+
+        function simulateUpload(type, note) {
+            isUploading = true;
+            const ringBox = document.getElementById('ring-box');
+            const ringNum = document.getElementById('ring-num');
+            const statusLabel = document.getElementById('upload-status-label');
+            
+            ringBox.style.display = 'flex';
+            let progress = 0;
+
+            const timer = setInterval(() => {
+                progress += Math.floor(Math.random() * 20) + 10;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(timer);
+                    setTimeout(() => {
+                        ringBox.style.display = 'none';
+                        statusLabel.innerText = "Đã đồng bộ thành công về CSDL Trung tâm.";
+                        isUploading = false;
+                        addHistoryItem(type, note);
+                    }, 400);
+                }
+                ringBox.style.background = `conic-gradient(var(--blue-action) ${progress * 3.6}deg, #e0e0e0 0deg)`;
+                ringNum.innerText = `${progress}%`;
+                statusLabel.innerHTML = `Đang mã hóa & đồng bộ dữ liệu... <b>${progress}%</b>`;
+            }, 250);
+        }
+
+        function addHistoryItem(type, note) {
+            const container = document.getElementById('history-container');
+            if (container.querySelector('div').style.background === 'transparent') {
+                container.innerHTML = '';
+            }
+            
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('vi-VN');
+            const timeStr = now.toLocaleTimeString('vi-VN');
+            const title = type === 'video' ? 'Video_HienTruong.mp4' : 'Anh_Chup_Khoi.jpg';
+            
+            const html = `
+                <div class="history-item">
+                    <div>
+                        <span><i class="fa-solid fa-check-circle" style="color:var(--success);"></i> <b>${title}</b></span>
+                        <div style="font-size: 10px; color: var(--text-muted);">${note ? note : 'Không có ghi chú'}</div>
+                    </div>
+                    <span style="color:var(--text-muted); text-align:right;">${dateStr}<br>${timeStr}</span>
+                </div>
+            `;
+            container.insertAdjacentHTML('afterbegin', html);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FireGuard AI - Trung Tâm Chỉ Huy PCCC</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+:root {
+  --bg-base: #0f111a;
+  --bg-panel: #181b28;
+  --bg-card: #222638;
+  --bg-card-hover: #2a3047;
+  --text-main: #f8fafc;
+  --text-muted: #8b92a5;
+  --border-color: #2f354d;
+  --alert-red: #ff4757;
+  --warning-gold: #ffa502;
+  --safe-green: #2ed573;
+  --blue-accent: #1e90ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+body { background: var(--bg-base); color: var(--text-main); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-panel); }
+::-webkit-scrollbar-thumb { background: #3a415e; border-radius: 3px; }
+
+/* HEADER GỌN GÀNG CHUẨN TRỰC BAN */
+.header {
+  height: 58px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px;
+  flex-shrink: 0;
+}
+.logo { display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 800; color: var(--alert-red); letter-spacing: 0.6px; }
+.burger {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  width: 34px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.burger:hover { border-color: var(--blue-accent); color: var(--blue-accent); }
+
+.duty-info { display: flex; align-items: center; gap: 16px; font-size: 13.5px; }
+.pulse-dot { width: 9px; height: 9px; background: var(--alert-red); border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,71,87,.7); }
+  70% { box-shadow: 0 0 0 9px rgba(255,71,87,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,71,87,0); }
+}
+.btn-up {
+  cursor: pointer;
+  background: rgba(255, 71, 87, 0.16);
+  border: 1px solid var(--alert-red);
+  color: #ff6b81;
+  padding: 6px 13px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+.btn-up:hover { background: var(--alert-red); color: #fff; }
+
+/* BỐ CỤC 3 CỘT RÕ RÀNG, THOÁNG MẮT */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 280px 1fr 390px;
+  gap: 14px;
+  padding: 14px;
+  height: calc(100vh - 58px);
+}
+.dashboard-container.collapsed {
+  grid-template-columns: 1fr 480px;
+}
+.collapsed #leftPanel { display: none; }
+
+.panel {
+  background: var(--bg-panel);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+.panel-header {
+  padding: 11px 16px;
+  background: var(--bg-card);
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+}
+
+/* CỘT TRÁI: DANH SÁCH BÁO ĐỘNG */
+.alert-list { padding: 12px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.alert-item {
+  background: var(--bg-card);
+  border: 1px solid transparent;
+  border-left: 4px solid var(--alert-red);
+  padding: 11px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.18s;
+}
+.alert-item:hover { background: var(--bg-card-hover); }
+.alert-item.active {
+  border-color: var(--alert-red);
+  border-left: 4px solid var(--alert-red);
+  background: rgba(255, 71, 87, 0.1);
+}
+.alert-time { font-size: 11px; color: var(--alert-red); font-weight: 700; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; }
+.alert-title { font-size: 13.5px; font-weight: 600; margin-bottom: 6px; word-break: break-word; line-height: 1.35; }
+.alert-reporter { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.sev-pill { font-size: 10px; padding: 1px 7px; border-radius: 4px; font-weight: 700; color: #fff; background: rgba(255,255,255,0.12); }
+.sev-pill.high { background: rgba(255,71,87,0.25); color: #ff6b81; border: 1px solid rgba(255,71,87,0.4); }
+.sev-pill.med { background: rgba(255,165,2,0.22); color: #ffc048; border: 1px solid rgba(255,165,2,0.4); }
+
+/* CỘT GIỮA: KHUNG VIDEO LỚN & THANH TUA */
+.vmode-switch { display: flex; gap: 4px; }
+.vmode-btn {
+  background: var(--bg-base);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.vmode-btn.active { background: var(--blue-accent); color: #fff; border-color: var(--blue-accent); }
+
+.stage { flex: 1; min-height: 0; display: flex; flex-direction: column; padding: 12px; gap: 10px; overflow: hidden; }
+.main-video-box { flex: 1; position: relative; background: #000; border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; min-height: 0; }
+.main-video-box video { width: 100%; height: 100%; object-fit: contain; display: block; }
+.vlabel {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(15, 17, 26, 0.8);
+  padding: 5px 11px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+  z-index: 2;
+}
+
+.ctrl { display: flex; align-items: center; gap: 10px; font-size: 12px; font-family: monospace; color: var(--text-muted); flex-shrink: 0; }
+.ctrl button { background: var(--bg-card); border: 1px solid var(--border-color); color: #fff; width: 34px; height: 30px; border-radius: 6px; cursor: pointer; }
+.seekwrap { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+#detBar { height: 6px; border-radius: 3px; background: #2a2f45; }
+#seek { width: 100%; accent-color: var(--blue-accent); cursor: pointer; }
+
+#strip { display: flex; gap: 6px; flex-shrink: 0; }
+.thumb { flex: 1; min-width: 0; cursor: pointer; border: 2px solid transparent; border-radius: 5px; overflow: hidden; background: #000; font-size: 10px; text-align: center; color: var(--text-muted); }
+.thumb canvas { display: block; width: 100%; height: 50px; object-fit: cover; }
+.thumb.on { border-color: var(--alert-red); color: #fff; }
+
+/* CỘT PHẢI: 3 CHỈ SỐ CHÍNH + CHIẾN THUẬT GEMINI + BẢN ĐỒ */
+.telemetry-content { padding: 14px; display: flex; flex-direction: column; gap: 14px; overflow-y: auto; flex: 1; }
+.metric-card { background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-color); overflow: hidden; flex-shrink: 0; }
+
+/* 1. BẢNG 3 CHỈ SỐ CHÍNH (NGANG - GỌN - DỄ ĐỌC) */
+.combined-metrics { display: grid; grid-template-columns: repeat(3, 1fr); }
+.c-metric { padding: 12px 10px; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.c-metric:last-child { border-right: none; }
+.c-title { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+.c-val { font-size: 15px; font-weight: 800; line-height: 1.25; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.c-sub { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* 2. HỘP PHÂN TÍCH CHIẾN THUẬT GEMINI */
+.ai-card { display: flex; flex-direction: column; flex: 1.15; min-height: 185px; border-left: 3px solid var(--blue-accent); }
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(30, 144, 255, 0.07);
+  color: var(--blue-accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.ai-header button {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 4px;
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 11px;
+}
+.ai-header button:hover { background: var(--blue-accent); color: #fff; border-color: var(--blue-accent); }
+.ai-content { font-size: 13px; color: #e2e8f0; line-height: 1.55; overflow-y: auto; flex: 1; padding: 12px; }
+.ai-row { margin-bottom: 9px; }
+.ai-row:last-child { margin-bottom: 0; }
+.ai-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; background: rgba(255,255,255,0.1); }
+.ai-tag.danger { background: rgba(255,71,87,.22); color: #ff6b81; border: 1px solid rgba(255,71,87,.45); }
+.ai-tag.warn { background: rgba(255,165,2,.22); color: #ffc048; border: 1px solid rgba(255,165,2,.45); }
+.ai-tag.safe { background: rgba(46,213,115,.2); color: #2ed573; border: 1px solid rgba(46,213,115,.4); }
+
+/* 3. BẢN ĐỒ HIỆN TRƯỜNG RỘNG RÃI */
+#mapCard { flex: 1; min-height: 200px; display: flex; flex-direction: column; padding: 0; overflow: hidden; }
+.map-header {
+  padding: 9px 12px;
+  background: var(--bg-card);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+#map { flex: 1; width: 100%; background: #1a1d2d; z-index: 1; min-height: 160px; }
+.coords-display {
+  font-family: monospace;
+  font-size: 11.5px;
+  color: var(--safe-green);
+  background: rgba(46, 213, 115, 0.1);
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 213, 115, 0.4);
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <button class="burger" id="burger" title="Ẩn/Hiện danh sách sự cố"><i class="fa-solid fa-bars"></i></button>
+    <i class="fa-solid fa-shield-halved"></i> FIREGUARD AI - COMMAND CENTER
+  </div>
+  <div class="duty-info">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span class="pulse-dot"></span>
+      <span style="color:var(--alert-red); font-weight:700;" id="statusBanner">TRỰC BAN TÁC CHIẾN</span>
+    </div>
+    <div style="width:1px; height:20px; background:var(--border-color);"></div>
+    <span><i class="fa-solid fa-headset"></i> Đội PCCC &amp; CNCH</span>
+    <span style="font-family:monospace; color:var(--blue-accent); font-weight:700; font-size:14px;" id="clock">00:00:00</span>
+    <label class="btn-up"><i class="fa-solid fa-upload"></i> Gửi video<input type="file" id="fileIn" accept="video/*" hidden></label>
+  </div>
+</header>
+
+<div class="dashboard-container" id="dash">
+  <!-- CỘT 1: DANH SÁCH SỰ CỐ -->
+  <div class="panel" id="leftPanel">
+    <div class="panel-header">
+      <span><i class="fa-solid fa-tower-broadcast" style="color:var(--alert-red)"></i> Sự cố đang tiếp nhận</span>
+      <span id="alertCount" style="font-size:11px; color:var(--text-muted)"></span>
+    </div>
+    <div class="alert-list" id="alertList"></div>
+  </div>
+
+  <!-- CỘT 2: VIDEO HIỆN TRƯỜNG -->
+  <div class="panel">
+    <div class="panel-header">
+      <span><i class="fa-solid fa-video" style="color:var(--blue-accent)"></i> GIÁM SÁT VIDEO HIỆN TRƯỜNG</span>
+      <div class="vmode-switch">
+        <button class="vmode-btn active" id="btnModeOverlay">Luồng AI Phân tích</button>
+        <button class="vmode-btn" id="btnModeRaw">Video Gốc</button>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="main-video-box">
+        <div class="vlabel" id="videoLabel"><i class="fa-solid fa-eye" style="color:var(--safe-green)"></i> LUỒNG AI PHÂN TÍCH</div>
+        <video id="vidRaw" crossorigin="anonymous" muted loop playsinline controls></video>
+      </div>
+
+      <div class="ctrl">
+        <button id="btnPlay" title="Phát/Tạm dừng"><i class="fa-solid fa-pause"></i></button>
+        <span id="tcur">0:00</span>
+        <div class="seekwrap">
+          <div id="detBar" title="Vùng màu đỏ/cam: Thời điểm phát hiện khói và lửa"></div>
+          <input type="range" id="seek" min="0" max="1000" value="0">
+        </div>
+        <span id="ttot">0:00</span>
+      </div>
+      <div id="strip"></div>
+      <video id="vidThumb" crossorigin="anonymous" muted preload="auto" style="display:none"></video>
+    </div>
+  </div>
+
+  <!-- CỘT 3: THÔNG SỐ CHÍNH + CHIẾN THUẬT GEMINI + BẢN ĐỒ -->
+  <div class="panel">
+    <div class="panel-header">
+      <span><i class="fa-solid fa-chart-line" style="color:var(--warning-gold)"></i> THÔNG SỐ CHÍNH &amp; CHIẾN THUẬT AI</span>
+    </div>
+    <div class="telemetry-content">
+
+      <!-- 1. BẢNG 3 CHỈ SỐ CỐT LÕI -->
+      <div class="metric-card combined-metrics">
+        <div class="c-metric">
+          <div class="c-title"><i class="fa-solid fa-cloud"></i> Màu Khói</div>
+          <div class="c-val" style="color:var(--alert-red)" id="mSmoke" title="">--</div>
+          <div class="c-sub">Tin cậy: <b id="mConf" style="color:#fff">--</b></div>
+        </div>
+        <div class="c-metric">
+          <div class="c-title"><i class="fa-solid fa-compass"></i> Hướng Lan</div>
+          <div class="c-val" style="color:var(--warning-gold)" id="mDir" title="">--</div>
+          <div class="c-sub" id="mDeg">Độ ổn định: --</div>
+        </div>
+        <div class="c-metric">
+          <div class="c-title"><i class="fa-solid fa-circle-half-stroke"></i> Độ Che Khuất</div>
+          <div class="c-val" style="color:#c56cf0"><span id="mLevel">--</span> <span style="font-size:13px" id="mOpac"></span></div>
+          <div class="c-sub">Chỉ số OI: <b id="mOI" style="color:#fff">--</b></div>
+        </div>
+      </div>
+
+      <!-- 2. HỘP PHÂN TÍCH CHIẾN THUẬT GEMINI -->
+      <div class="metric-card ai-card">
+        <div class="ai-header">
+          <span><i class="fa-solid fa-wand-magic-sparkles"></i> Phân tích Chiến thuật (Gemini AI)</span>
+          <div style="display:flex; gap:6px;">
+            <button id="btnRerunAI" title="Cập nhật phân tích AI"><i class="fa-solid fa-rotate"></i></button>
+            <button id="btnCopyAI" title="Sao chép nội dung"><i class="fa-regular fa-copy"></i> Copy</button>
+          </div>
+        </div>
+        <div class="ai-content" id="aiContent">
+          Đang chờ dữ liệu phân tích...
+        </div>
+      </div>
+
+      <!-- 3. BẢN ĐỒ VỊ TRÍ HIỆN TRƯỜNG -->
+      <div class="metric-card" id="mapCard">
+        <div class="map-header">
+          <span><i class="fa-solid fa-map-location-dot" style="color:var(--alert-red)"></i> Vị trí hiện trường</span>
+          <span class="coords-display" id="mCoords">LAT: -- | LON: --</span>
+        </div>
+        <div id="map"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const API = (location.protocol.startsWith('http') && location.port)
+  ? location.origin
+  : ('http://' + (location.hostname || '127.0.0.1') + ':8000');
+
+function $(id) { return document.getElementById(id); }
+function esc(str) {
+  if (str === null || str === undefined) return '';
+  const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  return String(str).replace(/[&<>"']/g, c => map[c]);
+}
+function set(id, text) { if ($(id)) $(id).textContent = text; }
+function fmt(seconds) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00';
+  const m = Math.floor(seconds / 60);
+  const s = String(Math.floor(seconds % 60)).padStart(2, '0');
+  return m + ':' + s;
+}
+function pct(value) {
+  return value == null || Number.isNaN(value) ? '--' : Math.round(value * 100) + '%';
+}
+
+const LV_COLOR = { 'Nhẹ': '#2ed573', 'Vừa': '#ffa502', 'Đặc': '#ff4757' };
+const SEV_CLASS = { 'Cao': 'danger', 'Trung bình': 'warn', 'Thấp': 'safe' };
+
+function ago(isoTime) {
+  const minutes = Math.floor((Date.now() - new Date(isoTime)) / 60000);
+  if (minutes < 1) return 'VỪA XONG';
+  if (minutes < 60) return minutes + ' PHÚT TRƯỚC';
+  if (minutes < 1440) return Math.floor(minutes / 60) + ' GIỜ TRƯỚC';
+  return Math.floor(minutes / 1440) + ' NGÀY TRƯỚC';
+}
+
+let ALERTS = [];
+let cur = null;
+let data = null;
+let ST = null;
+let dragging = false;
+let thumbTok = 0;
+let videoMode = 'overlay';
+let map, currentMarker, radiusCircle;
+
+function initMap() {
+  map = L.map('map').setView([10.762622, 106.660172], 13);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri',
+    maxZoom: 19
+  }).addTo(map);
+}
+initMap();
+
+setInterval(() => { $('clock').innerText = new Date().toLocaleTimeString('vi-VN', { hour12: false }); }, 1000);
+
+$('burger').onclick = () => {
+  $('dash').classList.toggle('collapsed');
+  setTimeout(() => map.invalidateSize(), 300);
+};
+
+function switchVideoSource(mode) {
+  if (!data) return;
+  videoMode = mode;
+  $('btnModeOverlay').classList.toggle('active', mode === 'overlay');
+  $('btnModeRaw').classList.toggle('active', mode === 'raw');
+
+  const v = $('vidRaw');
+  const t = v.currentTime || 0;
+  const rawPath = data.source_video_url || (data.file ? '/media/' + encodeURIComponent(data.file) : data.video_url);
+  const overlayPath = data.processed_video_url || data.video_url || rawPath;
+
+  if (mode === 'overlay') {
+    $('videoLabel').innerHTML = '<i class="fa-solid fa-eye" style="color:var(--safe-green)"></i> LUỒNG AI PHÂN TÍCH';
+    v.src = API + overlayPath;
+  } else {
+    $('videoLabel').innerHTML = '<i class="fa-solid fa-video" style="color:var(--warning-gold)"></i> VIDEO GỐC HIỆN TRƯỜNG';
+    v.src = API + rawPath;
+  }
+  v.currentTime = t;
+  v.play().catch(() => {});
+}
+
+$('vidRaw').addEventListener('error', () => {
+  if (data && videoMode === 'overlay') switchVideoSource('raw');
+});
+
+$('btnModeOverlay').onclick = () => switchVideoSource('overlay');
+$('btnModeRaw').onclick = () => switchVideoSource('raw');
+
+async function loadAlerts(sel) {
+  try {
+    ALERTS = await (await fetch(API + '/api/alerts')).json();
+  } catch (e) {
+    $('alertList').innerHTML = '<div style="padding:10px; color:var(--alert-red); font-size:13px;">Không kết nối được máy chủ.</div>';
+    return;
+  }
+  try { ST = await (await fetch(API + '/api/status')).json(); } catch (e) { ST = null; }
+  set('alertCount', ALERTS.length ? `(${ALERTS.length})` : '');
+  set('statusBanner', ALERTS.length ? `CÓ ${ALERTS.length} BÁO ĐỘNG` : 'TRỰC BAN TÁC CHIẾN');
+
+  if (sel || (!cur && ALERTS.length > 0)) return select(sel || ALERTS[0].id);
+  renderList();
+}
+
+function renderList() {
+  let busy = ST && (ST.current || ST.queue)
+    ? `<div style="padding:8px 10px; background:rgba(255,165,2,0.12); border-radius:6px; font-size:12px; color:var(--warning-gold)"><i class="fa-solid fa-spinner fa-spin"></i> Đang phân tích: ${esc(ST.current || '...')}</div>`
+    : '';
+
+  const itemsHtml = ALERTS.map(a => {
+    const s = a.summary || {};
+    const ai = a.ai || {};
+    const sev = ai.muc_do_cuoi || (s.level === 'Đặc' ? 'Cao' : s.level === 'Vừa' ? 'Trung bình' : 'Thấp');
+    const sevCls = sev === 'Cao' ? 'high' : (sev === 'Trung bình' ? 'med' : '');
+
+    return `<div class="alert-item ${a.id === cur ? 'active' : ''}" onclick="select('${esc(a.id)}')">
+      <div class="alert-time">
+        <span>${ago(a.created)}</span>
+        ${s.detected ? `<span class="sev-pill ${sevCls}">Mức ${esc(sev)}</span>` : '<span class="sev-pill">An toàn</span>'}
+      </div>
+      <div class="alert-title">${esc(a.title)}</div>
+      <div class="alert-reporter"><i class="fa-solid fa-user-check" style="color:var(--safe-green)"></i> ${esc(a.reporter)}</div>
+    </div>`;
+  }).join('');
+
+  $('alertList').innerHTML = busy + (itemsHtml || '<div style="padding:10px; color:var(--text-muted); font-size:13px;">Chưa có video sự cố.</div>');
+}
+
+async function select(id) {
+  cur = id;
+  renderList();
+  data = await (await fetch(API + '/api/alerts/' + id)).json();
+  thumbTok++;
+  $('strip').innerHTML = '';
+
+  switchVideoSource(videoMode);
+
+  // 1. CẬP NHẬT 3 CHỈ SỐ CHÍNH
+  const s = data.summary || {};
+  if (s.detected) {
+    set('mSmoke', s.smoke_label || '--');
+    $('mSmoke').title = s.smoke_label || '';
+    set('mConf', pct(s.smoke_conf));
+  } else {
+    set('mSmoke', 'Không có khói');
+    set('mConf', '--');
+  }
+
+  if (s.angle != null && s.direction && s.direction !== '--') {
+    set('mDir', s.direction);
+    $('mDir').title = s.direction;
+    set('mDeg', 'Độ ổn định R: ' + (s.R != null ? s.R.toFixed(2) : '--'));
+  } else {
+    set('mDir', 'Chưa xác định');
+    $('mDir').title = s.dir_note || 'Camera rung hoặc khói chưa định hướng rõ';
+    set('mDeg', 'Do rung / tản mạn');
+  }
+
+  if (s.opacity != null) {
+    set('mLevel', s.level || '--');
+    $('mLevel').style.color = s.level ? (LV_COLOR[s.level] || '#fff') : '#fff';
+    set('mOpac', '(' + pct(s.opacity) + ')');
+    set('mOI', s.oi != null ? s.oi.toFixed(2) : '--');
+  } else {
+    set('mLevel', '--');
+    set('mOpac', '');
+    set('mOI', '--');
+  }
+
+  // 2. CẬP NHẬT HỘP PHÂN TÍCH CHIẾN THUẬT GEMINI
+  renderTacticalBox(data.ai, s, data.ai_evidence);
+
+  // 3. CẬP NHẬT BẢN ĐỒ HIỆN TRƯỜNG
+  if (data.lat && data.lon) {
+    set('mCoords', `LAT: ${Number(data.lat).toFixed(4)} | LON: ${Number(data.lon).toFixed(4)}`);
+    if (currentMarker) map.removeLayer(currentMarker);
+    if (radiusCircle) map.removeLayer(radiusCircle);
+
+    currentMarker = L.marker([data.lat, data.lon]).addTo(map);
+    currentMarker.bindPopup(`<b>${esc(data.title)}</b><br>Người báo: ${esc(data.reporter)}`).openPopup();
+
+    if (s.detected) {
+      const col = s.level === 'Đặc' ? '#ff4757' : '#ffa502';
+      radiusCircle = L.circle([data.lat, data.lon], {
+        radius: s.level === 'Đặc' ? 200 : 120,
+        color: col, fillColor: col, fillOpacity: 0.18, weight: 2
+      }).addTo(map);
+    }
+
+    setTimeout(() => {
+      map.invalidateSize();
+      map.setView([data.lat, data.lon], 15);
+    }, 250);
+  }
+}
+
+function renderTacticalBox(ai, s, ev) {
+  const aiBox = $('aiContent');
+  if (!s || !s.detected) {
+    aiBox.innerHTML = `<div style="color:var(--text-muted)"><i class="fa-solid fa-circle-check" style="color:var(--safe-green)"></i> Chưa ghi nhận dấu hiệu khói hoặc lửa nguy hiểm trong video.</div>`;
+    return;
+  }
+
+  // Trường hợp Gemini đã trả về kết quả thành công
+  if (ai && ai.status === 'ok') {
+    const sev = ai.muc_do_cuoi || ai.muc_do || 'Trung bình';
+    const sevClass = SEV_CLASS[sev] || 'warn';
+    const tactics = (Array.isArray(ai.khuyen_nghi) && ai.khuyen_nghi.length)
+      ? ai.khuyen_nghi
+      : (ai.de_xuat_chien_thuat || []);
+
+    let html = `<div class="ai-row"><b><i class="fa-solid fa-triangle-exclamation" style="color:var(--alert-red)"></i> Mức độ cảnh báo:</b> <span class="ai-tag ${sevClass}">${esc(sev)}</span> (Độ chắc chắn: <b>${esc(ai.do_chac_chan || 'Vừa')}</b>)</div>`;
+    if (ai.tom_tat) {
+      html += `<div class="ai-row"><b><i class="fa-solid fa-file-contract" style="color:var(--blue-accent)"></i> Tóm tắt hiện trường:</b> ${esc(ai.tom_tat)}</div>`;
+    }
+    if (ai.huong_lan) {
+      html += `<div class="ai-row" style="color:var(--warning-gold)"><b><i class="fa-solid fa-wind"></i> Hướng phát tán:</b> ${esc(ai.huong_lan)}</div>`;
+    }
+    if (tactics.length > 0) {
+      html += `<div class="ai-row"><b style="color:var(--safe-green)"><i class="fa-solid fa-helmet-safety"></i> Khuyến nghị chiến thuật PCCC:</b><ul style="padding-left:18px; margin-top:5px;">`;
+      tactics.forEach(t => { html += `<li style="margin-bottom:4px;">${esc(t)}</li>`; });
+      html += `</ul></div>`;
+    }
+    aiBox.innerHTML = html;
+    return;
+  }
+
+  // Khi chưa đặt GEMINI_API_KEY hoặc đang chạy offline, tổng hợp báo cáo tác chiến sạch đẹp từ dữ liệu đo
+  const sev = (ai && ai.muc_do_cuoi) || (ev && ev.ket_luan_theo_luat && ev.ket_luan_theo_luat.muc_do) || (s.level === 'Đặc' ? 'Cao' : s.level === 'Vừa' ? 'Trung bình' : 'Thấp');
+  const sevClass = SEV_CLASS[sev] || 'warn';
+  const hasFire = ev && ev.phat_hien && ev.phat_hien.ti_le_khung_co_lua > 0;
+  const dirText = (s.angle != null && s.direction && s.direction !== '--')
+    ? `Khói phát tán hướng <b>${esc(s.direction)}</b> — ưu tiên tiếp cận từ đầu hướng gió.`
+    : `Hướng khói chưa cố định do góc quay di động — cần trinh sát vòng ngoài khi tiếp cận.`;
+
+  let recList = [];
+  if (s.smoke_label && s.smoke_label.includes('Đen')) {
+    recList.push('Trang bị bình thở độc lập (SCBA) do khói đen đặc tiềm ẩn khí độc từ nhựa/hóa chất/xăng dầu.');
+  } else {
+    recList.push('Triển khai đội hình chữa cháy cơ bản, chuẩn bị thiết bị thông khói và làm mát khu vực cháy.');
+  }
+  if (hasFire) {
+    recList.push('Đã ghi nhận ngọn lửa hở trực tiếp: Chủ động phương án phun bọt/nước áp lực cao chống cháy lan.');
+  }
+  if (s.level === 'Đặc' || s.level === 'Vừa') {
+    recList.push('Tầm nhìn tại hiện trường bị che khuất (' + pct(s.opacity) + '): Bố trí tổ rải vòi và đèn chiếu sáng dẫn đường.');
+  }
+
+  aiBox.innerHTML = `
+    <div class="ai-row"><b><i class="fa-solid fa-triangle-exclamation" style="color:var(--alert-red)"></i> Mức độ sự cố:</b> <span class="ai-tag ${sevClass}">${esc(sev)}</span></div>
+    <div class="ai-row"><b><i class="fa-solid fa-file-contract" style="color:var(--blue-accent)"></i> Tóm tắt hiện trường:</b> Phát hiện <b>${esc(s.smoke_label)}</b> bao phủ trung bình <b>${pct(s.coverage)}</b> khung hình, mức độ che khuất <b>${esc(s.level || 'Vừa')}</b> (OI: <b>${s.oi != null ? s.oi.toFixed(2) : '--'}</b>).</div>
+    <div class="ai-row" style="color:var(--warning-gold)"><b><i class="fa-solid fa-compass"></i> Nhận định hướng tiếp cận:</b> ${dirText}</div>
+    <div class="ai-row"><b style="color:var(--safe-green)"><i class="fa-solid fa-helmet-safety"></i> Đề xuất chiến thuật cho lực lượng PCCC:</b>
+      <ul style="padding-left:18px; margin-top:5px;">
+        ${recList.map(item => `<li style="margin-bottom:4px;">${item}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+}
+
+$('btnRerunAI').onclick = async () => {
+  if (!cur) return;
+  const btn = $('btnRerunAI');
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+  try {
+    await fetch(API + '/api/alerts/' + cur + '/ai', { method: 'POST' });
+    await select(cur);
+  } catch (e) {}
+  btn.innerHTML = '<i class="fa-solid fa-rotate"></i>';
+};
+
+$('btnCopyAI').onclick = () => {
+  navigator.clipboard.writeText($('aiContent').innerText).then(() => {
+    const btn = $('btnCopyAI');
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Đã Copy';
+    btn.style.color = 'var(--safe-green)';
+    setTimeout(() => { btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy'; btn.style.color = ''; }, 2000);
+  });
+};
+
+function buildDet() {
+  const d = $('vidRaw').duration;
+  if (!data || !data.frames || !d) return;
+  const F = data.frames, runs = [];
+  F.forEach((f, i) => {
+    const a = (f.t / d) * 100, b = ((F[i + 1] ? F[i + 1].t : f.t + 0.2) / d) * 100;
+    const on = !!f.bbox;
+    const prev = runs[runs.length - 1];
+    if (prev && prev.on === on) prev.b = b; else runs.push({ a, b, on });
+  });
+  const stops = runs.map(r => `${r.on ? '#ff4757' : '#2a2f45'} ${r.a.toFixed(1)}%, ${r.on ? '#ff4757' : '#2a2f45'} ${r.b.toFixed(1)}%`);
+  $('detBar').style.background = stops.length ? `linear-gradient(to right, ${stops.join(',')})` : '#2a2f45';
+}
+
+async function buildStrip() {
+  thumbTok++;
+  const tok = thumbTok, v = $('vidRaw'), d = v.duration;
+  if (!d || !Number.isFinite(d)) return;
+  const step = d / 10, tv = $('vidThumb'), strip = $('strip');
+  const rawPath = data.source_video_url || (data.file ? '/media/' + encodeURIComponent(data.file) : data.video_url);
+  await new Promise(r => { tv.onloadedmetadata = r; tv.onerror = r; tv.src = API + rawPath; });
+  if (tok !== thumbTok) return;
+  const cells = [];
+  strip.innerHTML = '';
+  for (let k = 0; k < 10; k++) {
+    const c = document.createElement('div');
+    c.className = 'thumb';
+    c.innerHTML = `<canvas width="120" height="68"></canvas>${fmt(k * step)}`;
+    c.onclick = () => { v.currentTime = k * step; };
+    strip.appendChild(c);
+    cells.push(c);
+  }
+  for (let k = 0; k < 10; k++) {
+    if (tok !== thumbTok) return;
+    await new Promise(res => { tv.onseeked = res; setTimeout(res, 1500); tv.currentTime = Math.min(k * step + 0.05, d - 0.05); });
+    const cv = cells[k].firstChild;
+    try { cv.getContext('2d').drawImage(tv, 0, 0, cv.width, cv.height); } catch (e) {}
+  }
+}
+
+$('vidRaw').onloadedmetadata = () => { buildDet(); buildStrip(); };
+$('btnPlay').onclick = () => { const v = $('vidRaw'); v.paused ? v.play() : v.pause(); };
+
+const sk = $('seek');
+sk.onpointerdown = () => { dragging = true; };
+sk.onpointerup = sk.onchange = () => { dragging = false; };
+sk.oninput = () => { const v = $('vidRaw'); if (v.duration) v.currentTime = (sk.value / 1000) * v.duration; };
+
+function loop() {
+  const v = $('vidRaw');
+  if (data && v.duration) {
+    const t = v.currentTime;
+    if (!dragging) sk.value = (t / v.duration) * 1000;
+    set('tcur', fmt(t));
+    set('ttot', fmt(v.duration));
+    $('btnPlay').firstChild.className = 'fa-solid ' + (v.paused ? 'fa-play' : 'fa-pause');
+    const idx = Math.min(9, Math.floor(t / (v.duration / 10)));
+    document.querySelectorAll('#strip .thumb').forEach((c, i) => c.classList.toggle('on', i === idx));
+  }
+  requestAnimationFrame(loop);
+}
+
+$('fileIn').onchange = async e => {
+  const f = e.target.files[0];
+  if (!f) return;
+  const lab = document.querySelector('.btn-up');
+  lab.style.opacity = 0.5;
+  const fd = new FormData();
+  fd.append('file', f);
+  try {
+    const r = await fetch(API + '/api/analyze', { method: 'POST', body: fd });
+    if (!r.ok) throw new Error((await r.json()).detail || r.status);
+    await loadAlerts((await r.json()).id);
+  } catch (err) {
+    alert('Lỗi phân tích: ' + err.message);
+  }
+  lab.style.opacity = 1;
+  e.target.value = '';
+};
+
+loadAlerts();
+loop();
+setInterval(() => loadAlerts(), 5000);
+</script>
+</body>
+</html>
