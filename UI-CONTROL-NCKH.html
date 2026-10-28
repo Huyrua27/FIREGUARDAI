@@ -369,9 +369,45 @@ body { background: var(--bg-base); color: var(--text-main); height: 100vh; displ
 </div>
 
 <script>
-const API = (location.protocol.startsWith('http') && location.port)
+// Có thể chỉ định backend qua tham số ?api=https://... (ví dụ địa chỉ tunnel)
+const API_PARAM = new URLSearchParams(location.search).get('api');
+const API = API_PARAM ? API_PARAM.replace(/\/+$/, '')
+  : (location.protocol.startsWith('http') && location.port)
   ? location.origin
   : ('http://' + (location.hostname || '127.0.0.1') + ':8000');
+
+// Chế độ demo: không có backend (GitHub Pages) -> đọc kết quả đã phân tích sẵn trong repo
+const ON_PAGES = !API_PARAM && location.hostname.endsWith('github.io');
+let DEMO = ON_PAGES;
+const DEMO_CACHE = {};
+
+async function demoAlert(id) {
+  if (!DEMO_CACHE[id]) DEMO_CACHE[id] = await (await fetch('data/alerts/' + encodeURIComponent(id) + '.json')).json();
+  return DEMO_CACHE[id];
+}
+
+async function fetchAlerts() {
+  if (!ON_PAGES) {
+    try {
+      const list = await (await fetch(API + '/api/alerts')).json();
+      DEMO = false;
+      return list;
+    } catch (e) { DEMO = true; }
+  }
+  const ids = await (await fetch('demo_alerts.json')).json();
+  const items = await Promise.all(ids.map(demoAlert));
+  return items.sort((a, b) => new Date(b.created) - new Date(a.created));
+}
+
+async function fetchAlert(id) {
+  return DEMO ? demoAlert(id) : (await fetch(API + '/api/alerts/' + id)).json();
+}
+
+// Đường dẫn video: backend phục vụ /media và /processed, bản demo trỏ thẳng vào thư mục trong repo
+function mediaUrl(path) {
+  if (!DEMO) return API + path;
+  return path.replace(/^\/media\//, 'citizen_uploads/').replace(/^\/processed\//, 'processed_videos/');
+}
 
 function $(id) { return document.getElementById(id); }
 function esc(str) {
@@ -439,10 +475,10 @@ function switchVideoSource(mode) {
 
   if (mode === 'overlay') {
     $('videoLabel').innerHTML = '<i class="fa-solid fa-eye" style="color:var(--safe-green)"></i> LUỒNG AI PHÂN TÍCH';
-    v.src = API + overlayPath;
+    v.src = mediaUrl(overlayPath);
   } else {
     $('videoLabel').innerHTML = '<i class="fa-solid fa-video" style="color:var(--warning-gold)"></i> VIDEO GỐC HIỆN TRƯỜNG';
-    v.src = API + rawPath;
+    v.src = mediaUrl(rawPath);
   }
   v.currentTime = t;
   v.play().catch(() => {});
@@ -457,12 +493,13 @@ $('btnModeRaw').onclick = () => switchVideoSource('raw');
 
 async function loadAlerts(sel) {
   try {
-    ALERTS = await (await fetch(API + '/api/alerts')).json();
+    ALERTS = await fetchAlerts();
   } catch (e) {
     $('alertList').innerHTML = '<div style="padding:10px; color:var(--alert-red); font-size:13px;">Không kết nối được máy chủ.</div>';
     return;
   }
-  try { ST = await (await fetch(API + '/api/status')).json(); } catch (e) { ST = null; }
+  ST = null;
+  if (!DEMO) { try { ST = await (await fetch(API + '/api/status')).json(); } catch (e) { ST = null; } }
   set('alertCount', ALERTS.length ? `(${ALERTS.length})` : '');
   set('statusBanner', ALERTS.length ? `CÓ ${ALERTS.length} BÁO ĐỘNG` : 'TRỰC BAN TÁC CHIẾN');
 
@@ -474,6 +511,9 @@ function renderList() {
   let busy = ST && (ST.current || ST.queue)
     ? `<div style="padding:8px 10px; background:rgba(255,165,2,0.12); border-radius:6px; font-size:12px; color:var(--warning-gold)"><i class="fa-solid fa-spinner fa-spin"></i> Đang phân tích: ${esc(ST.current || '...')}</div>`
     : '';
+  if (DEMO) {
+    busy += `<div style="padding:8px 10px; margin-bottom:8px; background:rgba(55,66,250,0.12); border-radius:6px; font-size:12px; color:var(--text-muted)"><i class="fa-solid fa-circle-info"></i> Chế độ demo: hiển thị kết quả đã phân tích sẵn (không có máy chủ).</div>`;
+  }
 
   const itemsHtml = ALERTS.map(a => {
     const s = a.summary || {};
@@ -497,7 +537,7 @@ function renderList() {
 async function select(id) {
   cur = id;
   renderList();
-  data = await (await fetch(API + '/api/alerts/' + id)).json();
+  data = await fetchAlert(id);
   thumbTok++;
   $('strip').innerHTML = '';
 
@@ -628,6 +668,7 @@ function renderTacticalBox(ai, s, ev) {
 
 $('btnRerunAI').onclick = async () => {
   if (!cur) return;
+  if (DEMO) { alert('Chế độ demo: cần chạy máy chủ backend để phân tích lại bằng Gemini.'); return; }
   const btn = $('btnRerunAI');
   btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
   try {
@@ -666,7 +707,7 @@ async function buildStrip() {
   if (!d || !Number.isFinite(d)) return;
   const step = d / 10, tv = $('vidThumb'), strip = $('strip');
   const rawPath = data.source_video_url || (data.file ? '/media/' + encodeURIComponent(data.file) : data.video_url);
-  await new Promise(r => { tv.onloadedmetadata = r; tv.onerror = r; tv.src = API + rawPath; });
+  await new Promise(r => { tv.onloadedmetadata = r; tv.onerror = r; tv.src = mediaUrl(rawPath); });
   if (tok !== thumbTok) return;
   const cells = [];
   strip.innerHTML = '';
@@ -711,6 +752,11 @@ function loop() {
 $('fileIn').onchange = async e => {
   const f = e.target.files[0];
   if (!f) return;
+  if (DEMO) {
+    alert('Chế độ demo: cần chạy máy chủ backend để phân tích video mới.');
+    e.target.value = '';
+    return;
+  }
   const lab = document.querySelector('.btn-up');
   lab.style.opacity = 0.5;
   const fd = new FormData();

@@ -1,8 +1,6 @@
-# Video thô / video người dân gửi / ảnh chụp tạm (nặng, không cần cho GitHub Pages)
+# Video thô / ảnh chụp tạm (nặng). citizen_uploads/ và processed_videos/ được giữ cho chế độ demo trên GitHub Pages
 video/
 video_test/
-citizen_uploads/
-processed_videos/
 snapshots/
 
 # Python
@@ -14,3 +12,6 @@ venv/
 
 # Khóa API (bí mật)
 gemini_api_key.txt
+
+# Cấu hình Claude Code (máy cục bộ)
+.claude/
